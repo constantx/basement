@@ -1,11 +1,9 @@
-# A boilerplate node.js for [dotcloud](https://www.dotcloud.com/)
+# A boilerplate node.js app for [dotcloud](https://www.dotcloud.com/)
 
-## Stack
+## Using:
 * [Express](http://expressjs.com/)
 * [Less](http://lesscss.org/)
 * [Jade](http://jade-lang.com/)
 * [Socket.io](http://socket.io/)
-  
-## Front-end
 * [Mootools](http://mootools.net/)
 * [Composer](http://lyonbros.github.com/composer.js/)
