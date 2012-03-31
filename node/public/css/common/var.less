@@ -1,0 +1,33 @@
+@colorBlack: #222;
+@colorText: #424242;
+@colorMain: #f4524e; //red
+@colorSecondary: lighten(@colorMain, 10);
+@colorSub: lighten(@colorText,40);
+@colorLight: #f5f6f6;
+
+@em: 14px;
+@leading: 1.5em;
+@widthSidebar: 300px;
+@widthLeftOffset: @em*2;
+
+/*
+ * These selection declarations have to be separate
+ * No text-shadow: twitter.com/miketaylr/status/12228805301
+ * Also: hot pink!
+ */
+
+/*::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }*/
+
+
+/// web font
+.tk1{
+    font-family: "inconsolata", Monaco, 'Courier New', monospace;
+}
+.tk2{
+    font-family: "ff-meta-serif-web-pro", Palatino, Georgia, serif;
+}
+
+.gridHorz(){
+    background: @colorLight url('http://static.tumblr.com/leuzdde/NM7lndgcm/gridhorz-21px.gif') top left repeat;
+}

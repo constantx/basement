@@ -1,0 +1,23 @@
+//////////////////////////////////////////////////////////////////// VAR
+@import 'reset-global.less';
+@import 'css3.less';
+@import 'var.less';
+
+
+/**
+ * @group BASE
+ */
+html, body{ height: 100%; }
+
+body{
+    background-color: @colorLight;
+    color: @colorText;
+    font-size: @em;
+    line-height: @leading;
+    .tk1;
+}
+
+#mainContainer{
+    .transition(0.2s);
+    margin: 20px 5%;
+}

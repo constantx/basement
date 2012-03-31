@@ -1,0 +1,11 @@
+{
+    "name": "basement"
+  , "version": "0.0.2"
+  , "private": true
+  , "dependencies": {
+      "express": "2.5.5"
+    , "less": ">= 1.2.0"
+    , "jade": ">= 0.20.0"
+    , "socket.io" : ">= 0.8.7"
+  }
+}
