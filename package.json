@@ -1,0 +1,11 @@
+{
+    "name": "basement-heroku"
+  , "version": "0.0.3"
+  , "private": true
+  , "dependencies": {
+      "express": ">= 2.5.9"
+    , "less": ">= 1.3.0"
+    , "jade": ">= 0.26.0"
+    , "socket.io" : ">= 0.9.6"
+  }
+}

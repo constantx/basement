@@ -1,0 +1,176 @@
+/*
+Eric Meyer Reset
+v1.0 | 20080212 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+:focus {
+  outline: 0;
+}
+ins {
+  text-decoration: none;
+}
+del {
+  text-decoration: line-through;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+body {
+  font-size: 62.5%;
+  font-weight: 100;
+}
+.generic {
+  float: left;
+  background: transparent;
+}
+.clear {
+  clear: both;
+}
+.end {
+  margin-left: 0!important;
+  margin-right: 0!important;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: block;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+  /* For IE 6/7 (trigger hasLayout) */
+}
+body,
+html {
+  width: 100%;
+}
+a {
+  color: inherit;
+}
+/*
+ * These selection declarations have to be separate
+ * No text-shadow: twitter.com/miketaylr/status/12228805301
+ * Also: hot pink!
+ */
+/*::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }*/
+.tk1 {
+  font-family: "inconsolata", Monaco, 'Courier New', monospace;
+}
+.tk2 {
+  font-family: "ff-meta-serif-web-pro", Palatino, Georgia, serif;
+}
+/**
+ * @group BASE
+ */
+html,
+body {
+  height: 100%;
+}
+body {
+  background-color: #f5f6f6;
+  color: #424242;
+  font-size: 14px;
+  line-height: 1.5em;
+  font-family: "inconsolata", Monaco, 'Courier New', monospace;
+}
+#mainContainer {
+  -moz-transition: 0.2s 1s ease-in-out;
+  -webkit-transition: 0.2s 1s ease-in-out;
+  -o-transition: 0.2s 1s ease-in-out;
+  transition: 0.2s 1s ease-in-out;
+  margin: 20px 5%;
+}
+h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+  font-weight: normal;
+  color: #f4524e;
+}
