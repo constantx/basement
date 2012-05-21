@@ -57,12 +57,13 @@ IO.configure('production',function(){
     IO.enable('browser client etag');          // apply etag caching logic based on version number
     IO.enable('browser client gzip');          // gzip the file
     IO.set('log level', 1);                    // reduce logging
+    IO.set("polling duration", 10);             // heroku polling duration
     IO.set('transports', [                     // enable all transports (optional if you want flashsocket)
-        'websocket'
-        ,'flashsocket'
-        ,'htmlfile'
+        //'websocket'
+        //,'flashsocket'
+        //,'htmlfile'
         ,'xhr-polling'
-        ,'jsonp-polling'
+        //,'jsonp-polling'
     ]);
 });
 
