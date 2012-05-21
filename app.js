@@ -62,7 +62,7 @@ IO.configure('production',function(){
         //'websocket'
         //,'flashsocket'
         //,'htmlfile'
-        ,'xhr-polling'
+        'xhr-polling'
         //,'jsonp-polling'
     ]);
     IO.set("polling duration", 10);             // heroku polling duration
@@ -72,7 +72,7 @@ IO.configure('production',function(){
 IO.sockets.on('connection', function (socket){
     
     socket.on('hello', function(){
-        socket.emit('hello', {
+        socket.emit('hellodolly', {
             data: 'hello dolly.'
         });
     });

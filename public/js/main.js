@@ -3,7 +3,7 @@ window.addEvent('domready', function() {
 
     socket.emit('hello');
     
-    socket.on('hello', function(res){
+    socket.on('hellodolly', function(res){
         $('pageContent').adopt(
             new Element('h1', { html: res.data})
         );
