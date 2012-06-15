@@ -26,6 +26,12 @@
           column-gap: @columnGap;
 }
 
+.boxSizing(@model){
+    box-sizing: @model;
+    -moz-box-sizing: @model;
+    -webkit-box-sizing: @model;
+}
+
 // Gradients
 #gradient {
     .horizontal (@startColor: #555, @endColor: #333) {

@@ -24,11 +24,11 @@ html
         //- libs
         script(src="/js/libs/mootools-core-1.4.5-full-nocompat-yc.js")
         script(src="/js/libs/mootools-more-1.4.0.1.js")
-        script(src="/js/libs/composer.js")
+        script(src="/js/libs/composer-0.7.4.js")
         script(src="/socket.io/socket.io.js")
 
-        //- main
-        script(src="/js/main.js")
+        //- require.js and run main.js
+        script(src="/js/libs/require-2.0.2.js", data-main="/js/main")
 
         title
         

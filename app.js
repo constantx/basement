@@ -53,11 +53,6 @@ IO.configure('development',function(){
 });
 
 IO.configure('production',function(){
-    IO.enable('browser client minification');  // send minified client
-    IO.enable('browser client etag');          // apply etag caching logic based on version number
-    IO.enable('browser client gzip');          // gzip the file
-    IO.set('log level', 1);                    // reduce logging
-    
     IO.set('transports', [                     // enable all transports (optional if you want flashsocket)
         //'websocket'
         //,'flashsocket'
@@ -66,6 +61,11 @@ IO.configure('production',function(){
         //,'jsonp-polling'
     ]);
     IO.set("polling duration", 10);             // heroku polling duration
+
+    IO.enable('browser client minification');  // send minified client
+    IO.enable('browser client etag');          // apply etag caching logic based on version number
+    IO.enable('browser client gzip');          // gzip the file
+    IO.set('log level', 1);                    // reduce logging
 });
 
 
