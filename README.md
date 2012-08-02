@@ -1,4 +1,5 @@
-# A boilerplate node.js app with socket.io for prototyping real-time web app
+# basement
+## boilerplate node.js server and front-end for real time web app prototyping
 
 ## Using:
 * [express](http://expressjs.com/)
