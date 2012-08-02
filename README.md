@@ -1,7 +1,8 @@
 # basement
-## boilerplate node.js server and front-end for real time web app prototyping
 
-## Using:
+## » boilerplate node.js server and front-end for real time web app prototyping
+
+## » stacks:
 * [express](http://expressjs.com/)
 * [jade](http://jade-lang.com/)
 * [socket.io](http://socket.io/)
