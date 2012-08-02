@@ -75,8 +75,8 @@ IO.configure('production',function(){
 IO.sockets.on('connection', function (socket){
     
     socket.on('hello', function(){
-        socket.emit('hellodolly', {
-            data: 'hello dolly.'
+        socket.emit('hello-back', {
+            data: 'you are in the basement.'
         });
     });
 

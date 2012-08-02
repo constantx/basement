@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     socket.emit('hello');
 
-    socket.on('hellodolly', function(res){
+    socket.on('hello-back', function(res){
         $('#pageContent').append(
             '<h1>' + res.data + '</h1>'
         );
