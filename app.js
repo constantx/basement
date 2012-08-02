@@ -1,23 +1,27 @@
 // hello dolly
 var express = require('express');
-var app = module.exports = express.createServer();
-var fs = require('fs');
-var port = process.env.PORT || 3000;
+var routes  = require('./routes');
+var http    = require('http');
+var path    = require('path');
+var app     = express();
+var server  = http.createServer(app);
+var fs      = require('fs');
+var PORT    = process.env.PORT || 3000;
+var IO      = require('socket.io').listen(server);
 
 // Configuration
 app.configure(function(){
+    app.set('port', process.env.PORT || PORT);
     app.set('views', __dirname + '/views');
     app.set('view engine', 'jade');
-    app.set('view options', { layout: false, pretty: true });
+    app.locals.pretty = true;
+    app.locals.layout = false;
+    app.use(express.favicon());
+    app.use(express.logger('dev'));
     app.use(express.bodyParser());
     app.use(express.methodOverride());
-    app.use(express.cookieParser());
-    app.use(express.session({ secret: 'nodejsisohsoawesome' }));
-    app.use(express.compiler({ src: __dirname + '/public', enable: ['less'] }));
-    app.use(express.static(__dirname + '/public'));
-    app.use(express.favicon());
-    app.use(express.logger('":method :url" :status'));
     app.use(app.router);
+    app.use(express.static(path.join(__dirname, 'public')));
 });
 
 // environment specific config 
@@ -39,14 +43,13 @@ app.get('/', function(req, res, next){
 
 // Only listen on $ node app.js
 if (!module.parent) {
-    app.listen(port);
-    console.log("Express server listening on port %d", app.address().port);
+    server.listen(app.get('port'), function(){
+        console.log("Express server listening on port " + app.get('port'));
+    });
 }
 
 //////////////////////////////////////////////////////////
-// SOCKET.IO 
-
-var IO = require('socket.io').listen(app);
+// SOCKET.IO
 
 IO.configure('development',function(){
     IO.set('log level', 2);
@@ -54,11 +57,11 @@ IO.configure('development',function(){
 
 IO.configure('production',function(){
     IO.set('transports', [                     // enable all transports (optional if you want flashsocket)
-        //'websocket'
-        //,'flashsocket'
-        //,'htmlfile'
-        'xhr-polling'
-        //,'jsonp-polling'
+        'websocket'
+        ,'flashsocket'
+        ,'htmlfile'
+        ,'xhr-polling'
+        ,'jsonp-polling'
     ]);
     IO.set("polling duration", 10);             // heroku polling duration
 

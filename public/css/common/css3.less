@@ -173,3 +173,13 @@
 //    background: url('/images/common/bgr-grid-horz-21.png') top left repeat;
 //    z-index: 9999;    
 //}
+
+.clearfix() {
+    *zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+    &:after { clear: both; }
+}
