@@ -34,12 +34,7 @@ app.configure('production', function(){
 });
 
 // Routes
-
-app.get('/', function(req, res, next){
-    res.render('index',{
-        title: 'hello dolly.'
-    });
-});
+app.get('/', routes.index);
 
 // Only listen on $ node app.js
 if (!module.parent) {
@@ -76,7 +71,7 @@ IO.sockets.on('connection', function (socket){
     
     socket.on('hello', function(){
         socket.emit('hello-back', {
-            data: 'you are in the basement.'
+            data: 'the basement'
         });
     });
 

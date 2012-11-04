@@ -1,56 +1,56 @@
 !!!
 html
-    head
-        meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
-        meta(http-equiv="Content-Language", content="en-us")
-        
-        meta(name="keywords", content="")
-        meta(name="description", content="")
-        meta(name="author", content="")
-        meta(name="copyright", content="")
-        
-        //- facebook open graph protocol        
-        meta(property="og:title", content="")
-        meta(property="og:type", content="")
-        meta(property="og:url", content="")
-        meta(property="og:image", content="")
-        meta(property="og:site_name", content="")
-        meta(property="fb:page_id", content="")
-        meta(property="og:description", content="")
-        
-        //- CSS
-        link(rel='stylesheet', href='/css/main.css')
+  head
+    meta(http-equiv="Content-Type", content="text/html; charset=utf-8")
+    meta(http-equiv="Content-Language", content="en-us")
+    
+    meta(name="keywords", content="")
+    meta(name="description", content="")
+    meta(name="author", content="")
+    meta(name="copyright", content="")
+    
+    //- facebook open graph protocol        
+    meta(property="og:title", content="")
+    meta(property="og:type", content="")
+    meta(property="og:url", content="")
+    meta(property="og:image", content="")
+    meta(property="og:site_name", content="")
+    meta(property="fb:page_id", content="")
+    meta(property="og:description", content="")
+    
+    //- CSS
+    link(rel='stylesheet', href='/css/main.css')
 
-        //- libs
-        script(src="/js/libs/jquery-1.7.2.min.js")
-        script(src="/js/libs/underscore-1.3.3.min.js")
-        script(src="/js/libs/backbone-0.9.2-min.js")
-        script(src="/js/libs/store.js")
-        script(src="/js/libs/holder.js")
+    //- require.js and run main.js
+    script(src="/js/libs/require-2.0.2.min.js", data-main="js/main")
 
-        script(src="/socket.io/socket.io.js")
+    title
+    
+  body
+    #mainContainer
+      #mainHeader
+      .cwrapper
+        block mainHeader
+            
 
-        //- require.js and run main.js
-        script(src="/js/libs/require-2.0.2.js", data-main="js/main")
+      #mainContent
+        .cwrapper
+          block mainContent
+            #pageContent
+              block pageContent
+            #sidebar
+              block sidebar
+      #mainFooter
+        .cwrapper
+          block mainFooter
+            p 
+              | &copy; design, slice, and hack!
 
-        title
-        
-    body
-        #mainContainer
-            #mainHeader
-            .cwrapper
-                block mainHeader
-                        
-
-            #mainContent
-                .cwrapper
-                    block mainContent
-                        #pageContent
-                            block pageContent
-                        #sidebar
-                            block sidebar
-            #mainFooter
-                .cwrapper
-                    block mainFooter
-                        p 
-                            | &copy; design, slice, and hack!
+    //- libs
+    script(src="/js/libs/jquery-1.8.0.min.js")
+    script(src="/js/libs/underscore-1.3.3.min.js")
+    script(src="/js/libs/backbone-0.9.2.min.js")
+    script(src="/js/libs/handlebars-1.0.0.beta.6.min.js")
+    script(src="/js/libs/holder.min.js")
+    script(src="/js/libs/store.min.js")
+    script(src="/socket.io/socket.io.js")

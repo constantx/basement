@@ -1,0 +1,32 @@
+
+body{
+    background-color: $color-light;
+    color: $color-text;
+    font-size: $em;
+    line-height: $leading;
+    font-family: "Panic Sans", "inconsolata",Monaco,'Courier New',monospace;
+}
+
+/**
+ * layout
+ */
+
+.cwrapper{
+    margin: 0 auto;
+    width: $widthMain;
+}
+
+#app-container{
+    z-index: 1;
+    width: 100%;
+    position: relative;
+    margin: 18px auto 0;
+}
+
+#main-footer{
+    padding: 1em 0;
+    p{
+        font-size: 12/16em;
+        text-align: center;
+    }
+}
