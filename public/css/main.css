@@ -1,176 +1,133 @@
-/*
-Eric Meyer Reset
-v1.0 | 20080212 */
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-font,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  outline: 0;
+  font: inherit;
   font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-:focus {
-  outline: 0;
-}
-ins {
-  text-decoration: none;
-}
-del {
-  text-decoration: line-through;
-}
+  vertical-align: baseline; }
+
+/* line 22, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
-body {
-  font-size: 62.5%;
-  font-weight: 100;
-}
-.generic {
-  float: left;
-  background: transparent;
-}
-.clear {
-  clear: both;
-}
-.end {
-  margin-left: 0!important;
-  margin-right: 0!important;
-}
-.clearfix:before,
-.clearfix:after {
-  content: "";
-  display: block;
-}
-.clearfix:after {
-  clear: both;
-}
-.clearfix {
-  zoom: 1;
-  /* For IE 6/7 (trigger hasLayout) */
-}
-body,
-html {
-  width: 100%;
-}
-a {
-  color: inherit;
-}
-/*
- * These selection declarations have to be separate
- * No text-shadow: twitter.com/miketaylr/status/12228805301
- * Also: hot pink!
- */
-/*::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
-::selection { background: #fe57a1; color: #fff; text-shadow: none; }*/
-.tk1 {
-  font-family: "inconsolata", Monaco, 'Courier New', monospace;
-}
-.tk2 {
-  font-family: "ff-meta-serif-web-pro", Palatino, Georgia, serif;
-}
-/**
- * @group BASE
- */
-html,
-body {
-  height: 100%;
-}
-body {
-  background-color: #f5f6f6;
-  color: #424242;
-  font-size: 14px;
-  line-height: 1.5em;
-  font-family: "inconsolata", Monaco, 'Courier New', monospace;
-}
-#mainContainer {
-  -moz-transition: 0.2s 1s ease-in-out;
-  -webkit-transition: 0.2s 1s ease-in-out;
-  -o-transition: 0.2s 1s ease-in-out;
-  transition: 0.2s 1s ease-in-out;
-  margin: 20px 5%;
-}
-h1 {
-  font-size: 3em;
-  margin-bottom: 1em;
+  border-spacing: 0; }
+
+/* line 28, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
   font-weight: normal;
-  color: #f4524e;
-}
+  vertical-align: middle; }
+
+/* line 30, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+/* line 32, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../../Applications/CodeKit.app/Contents/Resources/engines/compass/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+/* Modular Scale 
+---------------------- 
+16px @ 1:1.5     
+306px @ 1:1.5   
+----------------------*/
+/*
+Pixels  Ems Ems @ 16    % of 13
+1,032.750   64.547  64.547  7,944.231
+922.641 57.665  57.665  7,097.238
+688.500 43.031  43.031  5,296.154
+615.094 38.443  38.443  4,731.492
+459.000 28.688  28.688  3,530.769
+410.063 25.629  25.629  3,154.331
+306.000 19.125  19.125  2,353.846
+273.375 17.086  17.086  2,102.885
+204.000 12.75   12.75   1,569.231
+182.250 11.391  11.391  1,401.923
+136.000 8.5 8.5 1,046.154
+121.500 7.594   7.594   934.615
+90.667  5.667   5.667   697.438
+81.000  5.063   5.063   623.077
+60.445  3.778   3.778   464.962
+54.000  3.375   3.375   415.385
+40.297  2.519   2.519   309.977
+36.000  2.25    2.25    276.923
+26.865  1.679   1.679   206.654
+24.000  1.5 1.5 184.615
+17.910  1.119   1.119   137.769
+16.000  1   1   123.077
+11.940  0.746   0.746   91.846
+10.667  0.667   0.667   82.054
+7.960   0.498   0.498   61.231
+7.111   0.444   0.444   54.700
+5.307   0.332   0.332   40.823
+4.741   0.296   0.296   36.469
+3.538   0.221   0.221   27.215
+3.161   0.198   0.198   24.315
+2.359   0.147   0.147   18.146
+2.107   0.132   0.132   16.208
+1.573   0.098   0.098   12.100
+1.405   0.088   0.088   10.808
+1.049   0.066   0.066   8.069
+*/
+/* line 2, ../scss/base.scss */
+body {
+  background-color: #fffff2;
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.5em;
+  font-family: "Panic Sans", "inconsolata",Monaco,'Courier New',monospace; }
+
+/**
+ * layout
+ */
+/* line 14, ../scss/base.scss */
+.cwrapper {
+  margin: 0 auto;
+  width: 31.25; }
+
+/* line 19, ../scss/base.scss */
+#app-container {
+  z-index: 1;
+  width: 100%;
+  position: relative;
+  margin: 18px auto 0; }
+
+/* line 26, ../scss/base.scss */
+#main-footer {
+  padding: 1em 0; }
+  /* line 28, ../scss/base.scss */
+  #main-footer p {
+    font-size: 12/16em;
+    text-align: center; }
