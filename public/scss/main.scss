@@ -5,8 +5,7 @@
 
 @import "compass/reset";
 @import "compass/css3";
-@import "compass/utilities/general/clearfix";
-@import "compass/utilities/general/min";
+@import "compass/utilities/general";
 
-@import 'var.scss';
-@import 'base.scss';
+@import 'var';
+@import 'base';

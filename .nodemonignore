@@ -1,0 +1,6 @@
+*.coffee
+package.json
+Procfile
+public/*
+.git
+.sass-cache

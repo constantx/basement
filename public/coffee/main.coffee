@@ -5,9 +5,9 @@
   "use strict"
 
   $(document).ready ->
-    socket = io.connect(window.location.hostname)
+    socket = window.io.connect(window.location.hostname)
     socket.emit "hello"
     socket.on "hello-back", (res) ->
-      $("#pageContent").append "<h1>" + res.data + "</h1>"
+      $("#page-content").append "<h1 class='hello'>" + res.data + "</h1>"
 
 )();

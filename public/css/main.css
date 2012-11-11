@@ -58,50 +58,7 @@ a img {
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block; }
 
-/* Modular Scale 
----------------------- 
-16px @ 1:1.5     
-306px @ 1:1.5   
-----------------------*/
-/*
-Pixels  Ems Ems @ 16    % of 13
-1,032.750   64.547  64.547  7,944.231
-922.641 57.665  57.665  7,097.238
-688.500 43.031  43.031  5,296.154
-615.094 38.443  38.443  4,731.492
-459.000 28.688  28.688  3,530.769
-410.063 25.629  25.629  3,154.331
-306.000 19.125  19.125  2,353.846
-273.375 17.086  17.086  2,102.885
-204.000 12.75   12.75   1,569.231
-182.250 11.391  11.391  1,401.923
-136.000 8.5 8.5 1,046.154
-121.500 7.594   7.594   934.615
-90.667  5.667   5.667   697.438
-81.000  5.063   5.063   623.077
-60.445  3.778   3.778   464.962
-54.000  3.375   3.375   415.385
-40.297  2.519   2.519   309.977
-36.000  2.25    2.25    276.923
-26.865  1.679   1.679   206.654
-24.000  1.5 1.5 184.615
-17.910  1.119   1.119   137.769
-16.000  1   1   123.077
-11.940  0.746   0.746   91.846
-10.667  0.667   0.667   82.054
-7.960   0.498   0.498   61.231
-7.111   0.444   0.444   54.700
-5.307   0.332   0.332   40.823
-4.741   0.296   0.296   36.469
-3.538   0.221   0.221   27.215
-3.161   0.198   0.198   24.315
-2.359   0.147   0.147   18.146
-2.107   0.132   0.132   16.208
-1.573   0.098   0.098   12.100
-1.405   0.088   0.088   10.808
-1.049   0.066   0.066   8.069
-*/
-/* line 2, ../scss/base.scss */
+/* line 2, ../scss/_base.scss */
 body {
   background-color: #fffff2;
   color: #333333;
@@ -109,25 +66,23 @@ body {
   line-height: 1.5em;
   font-family: "Panic Sans", "inconsolata",Monaco,'Courier New',monospace; }
 
-/**
- * layout
- */
-/* line 14, ../scss/base.scss */
+/* line 10, ../scss/_base.scss */
 .cwrapper {
   margin: 0 auto;
-  width: 31.25; }
+  width: 31.25em; }
 
-/* line 19, ../scss/base.scss */
-#app-container {
-  z-index: 1;
-  width: 100%;
-  position: relative;
-  margin: 18px auto 0; }
+/* line 16, ../scss/_base.scss */
+#page-content .hello {
+  margin-top: 1em;
+  font-size: 3em;
+  line-height: 1.2em;
+  color: #f4524e;
+  letter-spacing: -1px; }
 
-/* line 26, ../scss/base.scss */
+/* line 25, ../scss/_base.scss */
 #main-footer {
-  padding: 1em 0; }
-  /* line 28, ../scss/base.scss */
+  padding: 4em 0 1em; }
+  /* line 27, ../scss/_base.scss */
   #main-footer p {
-    font-size: 12/16em;
-    text-align: center; }
+    color: #f4524e;
+    font-size: 0.75em; }

@@ -7,26 +7,25 @@ body{
     font-family: "Panic Sans", "inconsolata",Monaco,'Courier New',monospace;
 }
 
-/**
- * layout
- */
-
 .cwrapper{
     margin: 0 auto;
     width: $widthMain;
 }
 
-#app-container{
-    z-index: 1;
-    width: 100%;
-    position: relative;
-    margin: 18px auto 0;
+#page-content{
+    .hello{
+        margin-top: 1em;
+        font-size: 3em;
+        line-height: 1.2em;
+        color: $color-main;
+        letter-spacing: -1px;
+    }
 }
 
 #main-footer{
-    padding: 1em 0;
+    padding: 4em 0 1em;
     p{
-        font-size: 12/16em;
-        text-align: center;
+        color: $color-main;
+        font-size: (12em/16);
     }
 }
