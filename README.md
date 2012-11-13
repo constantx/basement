@@ -1,6 +1,6 @@
 # basement
 
-## boilerplate node.js server and front-end for real time web app prototyping
+## quickstart  node.js server and front-end for real time web app prototyping
 
 ## » stacks:
 * [express](http://expressjs.com/)
