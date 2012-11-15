@@ -4,7 +4,7 @@
 /* line 2 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
 body {
   background-color: color-light;
-  color: color-text;
+  color: color-main;
   font-size: em;
   line-height: leading;
   font-family: "Panic Sans", "inconsolata", Monaco, 'Courier New', monospace;
@@ -13,27 +13,13 @@ body {
 /* line 9 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
 .cwrapper {
   margin: 0 auto;
-  width: widthMain;
+  width: width-main;
 }
 
 /* line 13 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
-
-/* line 14 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
-#page-content .hello {
-  margin-top: 1em;
+#hello {
+  padding: 3em 0 0;
   font-size: 3em;
   line-height: 1.2em;
-  color: color-main;
   letter-spacing: -1px;
-}
-
-/* line 21 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
-#main-footer {
-  padding: 4em 0 1em;
-}
-
-/* line 23 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
-#main-footer p {
-  color: color-main;
-  font-size: 0.75em;
 }
