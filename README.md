@@ -18,6 +18,6 @@ Jumpstart your node.js server for prototyping
 - [backbone](http://backbonejs.org/)
 
 ## Under the basement
-- Coffeescript => JS! (auto-compile)
-- Stylus => CSS (auto-compile to `/public/css`)
+- Auto-compile coffeescript to JS
+- Auto-compile stylus to CSS
 - nodemon auto-restart the server when there's a change in server files (files under `/`, `/routes`)
