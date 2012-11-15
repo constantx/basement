@@ -1,20 +1,23 @@
 {
-    "name": "basement"
-    , "version": "0.0.4"
-    , "private": true
-    , "scripts": {
-        "start": "node app"
-    }
-    , "engines": {
-        "node": "0.8.11",
-        "npm":  "1.1.45"
-    }
-    , "dependencies": {
-        "express"       : "= 3.0.1"
-        , "less"        : "= 1.3.0"
-        , "jade"        : "= 0.27.6"
-        , "socket.io"   : "= 0.9.6"
-        , "nodemon"     : "= 0.6.23" 
-        , "stylus"      : "=  0.30.1"
-    }
+  "name": "basement"
+  , "version": "0.0.4"
+  , "private": true
+  , "scripts": {
+    "start": "node app"
+  }
+  , "engines": {
+    "node": "0.8.11",
+    "npm":  "1.1.45"
+  }
+  , "dependencies": {
+    "express"         : "= 3.0.1",
+    "jade"            : "= 0.27.6",
+    "stylus"          : "=  0.30.1",
+    "socket.io"       : "= 0.9.6"
+  }
+
+  , "devDevpendencies": {
+    "nodemon"         : "= 0.6.23",
+    "coffee-script"   : "= 1.4.0"
+  }
 }
