@@ -3,25 +3,25 @@ var IO, PORT, app, express, fs, http, nib, path, routes, server, stylus;
 
 express = require("express");
 
-routes = require("./routes");
-
 http = require("http");
 
 path = require("path");
+
+fs = require("fs");
+
+routes = require("./routes");
+
+stylus = require('stylus');
+
+nib = require('nib');
 
 app = express();
 
 server = http.createServer(app);
 
-fs = require("fs");
-
-PORT = process.env.PORT || 3000;
-
 IO = require("socket.io").listen(server);
 
-stylus = require('stylus');
-
-nib = require('nib');
+PORT = process.env.PORT || 3000;
 
 app.configure(function() {
   app.set("port", process.env.PORT || PORT);

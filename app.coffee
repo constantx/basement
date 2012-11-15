@@ -1,15 +1,15 @@
 # hello dolly
 express = require("express")
-routes  = require("./routes")
 http    = require("http")
 path    = require("path")
-app     = express()
-server  = http.createServer(app)
 fs      = require("fs")
-PORT    = process.env.PORT or 3000
-IO      = require("socket.io").listen(server)
+routes  = require("./routes")
 stylus  = require('stylus')
 nib     = require('nib')
+app     = express()
+server  = http.createServer(app)
+IO      = require("socket.io").listen(server)
+PORT    = process.env.PORT or 3000
 
 # Configuration
 app.configure ->

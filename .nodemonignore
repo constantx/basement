@@ -5,3 +5,4 @@ package.json
 Procfile
 public/*
 .git
+README.md

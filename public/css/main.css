@@ -1,7 +1,17 @@
+
+/* line 1 : /Users/tnguyen/Dropbox/projects/basement/node_modules/stylus/lib/functions/index.styl */
+
+/* line 228 : /Users/tnguyen/Dropbox/projects/basement/stylus/main.styl */
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+/* line 1 : /Users/tnguyen/Dropbox/projects/basement/stylus/_var.styl */
+
+/* line 2 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
+
+/* line 2 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
 body {
   background-color: #fffff2;
   color: #333;
@@ -9,10 +19,16 @@ body {
   line-height: 1.5em;
   font-family: "Panic Sans", "inconsolata", Monaco, 'Courier New', monospace;
 }
+
+/* line 9 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
 .cwrapper {
   margin: 0 auto;
   width: 31.25em;
 }
+
+/* line 13 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
+
+/* line 14 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
 #page-content .hello {
   margin-top: 1em;
   font-size: 3em;
@@ -20,9 +36,13 @@ body {
   color: #f4524e;
   letter-spacing: -1px;
 }
+
+/* line 21 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
 #main-footer {
   padding: 4em 0 1em;
 }
+
+/* line 23 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
 #main-footer p {
   color: #f4524e;
   font-size: 0.75em;
