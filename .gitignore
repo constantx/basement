@@ -39,4 +39,16 @@ Thumbs.db
 
 # node.js related
 node_modules
-.sass-cache
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+npm-debug.log

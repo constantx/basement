@@ -1,7 +1,7 @@
 
 /* line 1 : /Users/tnguyen/Dropbox/projects/basement/node_modules/stylus/lib/functions/index.styl */
 
-/* line 228 : /Users/tnguyen/Dropbox/projects/basement/stylus/main.styl */
+/* line 25 : /Users/tnguyen/Dropbox/projects/basement/stylus/main.styl */
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
@@ -27,9 +27,7 @@ body {
 }
 
 /* line 13 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
-
-/* line 14 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
-#page-content .hello {
+#hello {
   margin-top: 1em;
   font-size: 3em;
   line-height: 1.2em;
@@ -37,13 +35,13 @@ body {
   letter-spacing: -1px;
 }
 
-/* line 21 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
+/* line 20 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
 #main-footer {
   padding: 4em 0 1em;
+  color: #f4524e;
 }
 
 /* line 23 : /Users/tnguyen/Dropbox/projects/basement/stylus/_base.styl */
 #main-footer p {
-  color: #f4524e;
   font-size: 0.75em;
 }

@@ -3,8 +3,5 @@
 
 "use strict"
 
-$(document).ready ->
-  socket = window.io.connect(window.location.hostname)
-  socket.emit "hello"
-  socket.on "hello-back", (res) ->
-    if res.data then $("#hello").html(res.data)
+# coffee it up!
+# your code here

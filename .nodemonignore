@@ -1,8 +1,10 @@
-*.coffee
+.jade
+.coffee
 .css
 .styl
-package.json
-Procfile
-public/*
 .git
+package.json
 README.md
+Procfile
+
+public/
