@@ -12,12 +12,13 @@
   , "dependencies": {
     "express"         : "= 3.0.1",
     "jade"            : "= 0.27.6",
-    "stylus"          : "=  0.30.1",
     "socket.io"       : "= 0.9.6"
   }
 
-  , "devDevpendencies": {
-    "nodemon"         : "= 0.6.23",
-    "coffee-script"   : "= 1.4.0"
+  , "devDependencies": {
+    "nib"             : "= 0.8.2",
+    "stylus"          : "=  0.30.1",
+    "coffee-script"   : "= 1.4.0",
+    "nodemon"         : "= 0.6.23"
   }
 }

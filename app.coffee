@@ -1,18 +1,20 @@
 # hello dolly
 express = require("express")
-routes = require("./routes")
-http = require("http")
-path = require("path")
-app = express()
-server = http.createServer(app)
-fs = require("fs")
-PORT = process.env.PORT or 3000
-IO = require("socket.io").listen(server)
+routes  = require("./routes")
+http    = require("http")
+path    = require("path")
+app     = express()
+server  = http.createServer(app)
+fs      = require("fs")
+PORT    = process.env.PORT or 3000
+IO      = require("socket.io").listen(server)
+stylus  = require('stylus')
+nib     = require('nib')
 
 # Configuration
 app.configure ->
   app.set "port", process.env.PORT or PORT
-  app.set "views", __dirname + "/views"
+  app.set "views", "#{__dirname}/views"
   app.set "view engine", "jade"
   app.locals.pretty = true
   app.locals.layout = false
@@ -21,8 +23,17 @@ app.configure ->
   app.use express.bodyParser()
   app.use express.methodOverride()
   app.use app.router
-  app.use express.static(path.join(__dirname, "public"))
-
+  app.use stylus.middleware
+    debug: true
+    src:  "#{__dirname}/stylus"
+    dest: "#{__dirname}/public/css"
+    compile: (str, path) ->
+      stylus(str)
+        .set("filename", path)
+        .set("compress", true)
+        .use(nib())
+        .import('nib')
+  app.use express.static(path.join(__dirname, "public/"))
 
 # environment specific config 
 app.configure "development", ->
@@ -41,7 +52,7 @@ app.get "/", routes.index
 # Only listen on $ node app.js
 unless module.parent
   server.listen app.get("port"), ->
-    console.log "Express server listening on port " + app.get("port")
+    console.log "Express server listening on port #{app.get("port")}"
 
 
 #////////////////////////////////////////////////////////

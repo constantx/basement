@@ -1,6 +1,7 @@
 *.coffee
+.css
+.styl
 package.json
 Procfile
 public/*
 .git
-.sass-cache
