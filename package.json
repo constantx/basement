@@ -12,8 +12,9 @@
     , "dependencies": {
         "express"       : "= 3.0.1"
         , "less"        : "= 1.3.0"
-        , "jade"        : "*"
+        , "jade"        : "= 0.27.6"
         , "socket.io"   : "= 0.9.6"
         , "nodemon"     : "= 0.6.23" 
+        , "stylus"      : "=  0.30.1"
     }
 }
