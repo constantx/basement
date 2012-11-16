@@ -28,8 +28,6 @@
     app.set("port", process.env.PORT || PORT);
     app.set("views", "" + __dirname + "/views");
     app.set("view engine", "jade");
-    app.locals.pretty = true;
-    app.locals.layout = false;
     app.use(express.favicon());
     app.use(express.logger("dev"));
     app.use(express.bodyParser());
@@ -47,10 +45,11 @@
   });
 
   app.configure("development", function() {
-    return app.use(express.errorHandler({
+    app.use(express.errorHandler({
       dumpExceptions: true,
       showStack: true
     }));
+    return app.locals.pretty = true;
   });
 
   app.configure("production", function() {
