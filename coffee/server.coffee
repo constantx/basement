@@ -25,12 +25,6 @@ app.configure ->
     debug: true
     src:  "#{__dirname}/stylus"
     dest: "#{__dirname}/public/css"
-    compile: (str, path) ->
-      stylus(str)
-        .set("filename", path)
-        .set("compress", true)
-        .use(nib())
-        .import('nib')
   app.use express.static(path.join(__dirname, "public/"))
 
 # environment specific config 

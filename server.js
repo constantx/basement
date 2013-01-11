@@ -36,10 +36,7 @@
     app.use(stylus.middleware({
       debug: true,
       src: "" + __dirname + "/stylus",
-      dest: "" + __dirname + "/public/css",
-      compile: function(str, path) {
-        return stylus(str).set("filename", path).set("compress", true).use(nib())["import"]('nib');
-      }
+      dest: "" + __dirname + "/public/css"
     }));
     return app.use(express["static"](path.join(__dirname, "public/")));
   });
