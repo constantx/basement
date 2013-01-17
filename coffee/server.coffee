@@ -4,8 +4,6 @@ http    = require("http")
 path    = require("path")
 fs      = require("fs")
 routes  = require("./routes")
-stylus  = require('stylus')
-nib     = require('nib')
 app     = express()
 server  = http.createServer(app)
 IO      = require("socket.io").listen(server)
@@ -21,10 +19,6 @@ app.configure ->
   app.use express.bodyParser()
   app.use express.methodOverride()
   app.use app.router
-  app.use stylus.middleware
-    debug: true
-    src:  "#{__dirname}/stylus"
-    dest: "#{__dirname}/public/css"
   app.use express.static(path.join(__dirname, "public/"))
 
 # environment specific config 

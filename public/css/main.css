@@ -1,55 +1,55 @@
 
-/* line 1 : /Users/constantx/Dropbox/projects/basement/node_modules/stylus/lib/functions/index.styl */
+/* line 1 : /Users/ConstantX/Dropbox/projects/basement/node_modules/stylus/lib/functions/index.styl */
 
-/* line 12 : /Users/constantx/Dropbox/projects/basement/stylus/main.styl */
+/* line 239 : /Users/ConstantX/Dropbox/projects/basement/stylus/main.styl */
 /* Welcome to Compass.
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-/* line 1 : /Users/constantx/Dropbox/projects/basement/stylus/_var.styl */
+/* line 1 : /Users/ConstantX/Dropbox/projects/basement/stylus/_var.styl */
 
-/* line 19 : /Users/constantx/Dropbox/projects/basement/stylus/_base.styl */
+/* line 19 : /Users/ConstantX/Dropbox/projects/basement/stylus/_base.styl */
 
-/* line 13 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/index.styl */
+/* line 13 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/index.styl */
 
-/* line 2 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/border.styl */
+/* line 2 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/border.styl */
 
-/* line 2 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/clearfix.styl */
+/* line 2 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/clearfix.styl */
 
-/* line 2 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/color-image.styl */
+/* line 2 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/color-image.styl */
 
-/* line 6 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/flex.styl */
+/* line 6 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/flex.styl */
 
-/* line 154 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/gradients.styl */
+/* line 154 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/gradients.styl */
 
-/* line 154 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/config.styl */
+/* line 154 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/config.styl */
 
-/* line 2 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/iconic.styl */
+/* line 2 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/iconic.styl */
 
-/* line 2 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/image.styl */
+/* line 2 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/image.styl */
 
-/* line 15 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/overflow.styl */
+/* line 15 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/overflow.styl */
 
-/* line 3 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/positions.styl */
+/* line 3 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/positions.styl */
 
-/* line 3 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/reset.styl */
+/* line 3 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/reset.styl */
 
-/* line 5 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/text/index.styl */
+/* line 5 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/text/index.styl */
 
-/* line 2 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/text/aliases.styl */
+/* line 2 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/text/aliases.styl */
 
-/* line 2 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/text/ellipsis.styl */
+/* line 2 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/text/ellipsis.styl */
 
-/* line 11 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/text/hide-text.styl */
+/* line 11 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/text/hide-text.styl */
 
-/* line 9 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/text/replace-text.styl */
+/* line 9 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/text/replace-text.styl */
 
-/* line 532 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/vendor.styl */
+/* line 557 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/vendor.styl */
 
-/* line 532 : /Users/constantx/Dropbox/projects/basement/node_modules/nib/lib/nib/config.styl */
+/* line 557 : /Users/ConstantX/Dropbox/projects/basement/node_modules/nib/lib/nib/config.styl */
 
-/* line 3 : /Users/constantx/Dropbox/projects/basement/stylus/_base.styl */
+/* line 3 : /Users/ConstantX/Dropbox/projects/basement/stylus/_base.styl */
 body {
   background-color: #fffff2;
   color: #f4524e;
@@ -58,13 +58,13 @@ body {
   font-family: "Panic Sans", "inconsolata", Monaco, 'Courier New', monospace;
 }
 
-/* line 10 : /Users/constantx/Dropbox/projects/basement/stylus/_base.styl */
+/* line 10 : /Users/ConstantX/Dropbox/projects/basement/stylus/_base.styl */
 .cwrapper {
   margin: 0 auto;
   width: 31.25em;
 }
 
-/* line 14 : /Users/constantx/Dropbox/projects/basement/stylus/_base.styl */
+/* line 14 : /Users/ConstantX/Dropbox/projects/basement/stylus/_base.styl */
 #hello {
   padding: 3em 0 0;
   font-size: 3em;
