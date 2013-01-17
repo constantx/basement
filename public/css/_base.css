@@ -1,7 +1,3 @@
-
-/* line 1 : /Users/constantx/Dropbox/projects/basement/node_modules/stylus/lib/functions/index.styl */
-
-/* line 2 : /Users/constantx/Dropbox/projects/basement/stylus/_base.styl */
 body {
   background-color: color-light;
   color: color-main;
@@ -9,14 +5,10 @@ body {
   line-height: leading;
   font-family: "Panic Sans", "inconsolata", Monaco, 'Courier New', monospace;
 }
-
-/* line 9 : /Users/constantx/Dropbox/projects/basement/stylus/_base.styl */
 .cwrapper {
   margin: 0 auto;
   width: width-main;
 }
-
-/* line 13 : /Users/constantx/Dropbox/projects/basement/stylus/_base.styl */
 #hello {
   padding: 3em 0 0;
   font-size: 3em;
