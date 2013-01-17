@@ -1,5 +1,5 @@
-### global NR:true, jQuery:true, Backbone:true, $:true, _:true ###
-### jshint browser: true, white: true, vars: true, devel: true, bitwise: true, debug: true, nomen: true, sloppy: false, indent: 2 ###
+###global document:true, NR:true, Backbone:true, $:true, _:true ###
+###jshint devel: true###
 
 "use strict"
 
