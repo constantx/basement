@@ -1,17 +1,3 @@
-body {
-  background-color: color-light;
-  color: color-main;
-  font-size: em;
-  line-height: leading;
-  font-family: "Panic Sans", "inconsolata", Monaco, 'Courier New', monospace;
-}
-.cwrapper {
-  margin: 0 auto;
-  width: width-main;
-}
-#hello {
-  padding: 3em 0 0;
-  font-size: 3em;
-  line-height: 1.2em;
-  letter-spacing: -1px;
-}
+body{background-color:color-light;color:color-main;font-size:em;line-height:leading;font-family:"Panic Sans","inconsolata",Monaco,'Courier New',monospace}
+.cwrapper{margin:0 auto;width:width-main}
+#hello{padding:3em 0 0;font-size:3em;line-height:1.2em;letter-spacing:-1px}

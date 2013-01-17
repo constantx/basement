@@ -1,3 +1,1 @@
-web: ./node_modules/.bin/nodemon server.js
-coffee: ./node_modules/.bin/coffee --watch --compile --output ./ coffee
-stylus: ./node_modules/.bin/stylus -u nib --watch stylus --out public/css
+web: node server.js
