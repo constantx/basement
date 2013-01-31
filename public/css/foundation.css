@@ -614,6 +614,3 @@ table.show-for-xlarge, table.show-for-large, table.hide-for-small, table.hide-fo
   .top-bar ul li.has-button { padding: 5px 15px; }
   .top-bar ul li .button.small { margin: 0 !important; display: inline-block; width: 100%; }
   .top-bar ul > li.has-button a.button { margin: 0; } }
-body{background-color:#fffff2;color:#f4524e;font-size:16px;line-height:1.5em;font-family:"Panic Sans","inconsolata",Monaco,'Courier New',monospace}
-.cwrapper{margin:0 auto;width:31.25em}
-#hello{padding:3em 0 0;font-size:3em;line-height:1.2em;letter-spacing:-1px}
