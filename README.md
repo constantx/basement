@@ -1,5 +1,5 @@
 # basement
-Jumpstart your node.js server for prototyping
+Jumpstart your node.js server for real-time app prototyping
 
 ## Getting started
 - install [foreman](https://github.com/ddollar/foreman)
