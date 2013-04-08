@@ -4,8 +4,7 @@ Jumpstart your node.js server for prototyping
 ## Getting started
 - install [foreman](https://github.com/ddollar/foreman)
 - install [node.js 0.8.x](http://nodejs.org/)
-- `npm install`
-- start the server with `foreman start`
+- start the server with `make`
 
 ## In the basement
 - [coffeescript](http://coffeescript.org/)
