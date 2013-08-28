@@ -1,4 +1,6 @@
 # hello dolly
+require('coffee-script')
+require('colors')
 express = require("express")
 http    = require("http")
 path    = require("path")
@@ -7,7 +9,8 @@ routes  = require("./routes")
 app     = express()
 server  = http.createServer(app)
 IO      = require("socket.io").listen(server)
-PORT    = process.env.PORT or 3000
+PORT    = process.env.PORT or 5000
+
 
 # Configuration
 app.configure ->
@@ -21,7 +24,7 @@ app.configure ->
   app.use app.router
   app.use express.static(path.join(__dirname, "public/"))
 
-# environment specific config 
+# environment specific config
 app.configure "development", ->
   app.use express.errorHandler
     dumpExceptions: true
@@ -38,7 +41,11 @@ app.get "/", routes.index
 # Only listen on $ node app.js
 unless module.parent
   server.listen app.get("port"), ->
-    console.log "Express server listening on port #{app.get("port")}"
+    console.log """\n
+    ==================================================
+    Express server running on: #{app.get("port")}
+    ==================================================
+    """.green
 
 
 #////////////////////////////////////////////////////////

@@ -27,26 +27,15 @@ module.exports = (grunt) ->
       ]
 
     stylus:
-      extension:
-        options:
-          compress: false
-        files: [
-          expand: true # Enable dynamic expansion.
-          cwd: "<%= dirs.extension %>/stylus" # Src matches are relative to this path
-          src: ["**/*.styl", "!partials/*.styl"] # Actual pattern(s) to match, dont compile partials
-          dest: "<%= dirs.extension_compiled %>/css" # Destination path prefix.
-          ext: ".css" # Dest filepaths will have this extension.
-        ]
-      # we might not even get to use it here, but let's keep the task for now, why not?
       app:
         options:
           compress: false
         files: [
-          expand: true # Enable dynamic expansion.
-          cwd: "<%= dirs.app %>/stylus" # Src matches are relative to this path
-          src: ["**/*.styl", "!partials/*.styl"] # Actual pattern(s) to match, dont compile partials
-          dest: "<%= dirs.app %>/public/css/" # Destination path prefix.
-          ext: ".css" # Dest filepaths will have this extension.
+          expand: true
+          cwd: "<%= dirs.app %>/stylus"
+          src: ["**/*.styl", "!partials/*.styl"]
+          dest: "<%= dirs.app %>/public/css/"
+          ext: ".css"
         ]
 
     coffee:
@@ -54,12 +43,55 @@ module.exports = (grunt) ->
         options:
           compress: false
         files: [
-          expand: true # Enable dynamic expansion.
-          cwd: "<%= dirs.app %>/coffee" # Src matches are relative to this path
-          src: ["**/*.coffee"] # Actual pattern(s) to match.
-          dest: "<%= dirs.app %>/" # Destination path prefix.
-          ext: ".js" # Dest filepaths will have this extension.
+          expand: true
+          cwd: "<%= dirs.app %>/coffee"
+          src: ["**/*.coffee"]
+          dest: "<%= dirs.app %>/"
+          ext: ".js"
         ]
+
+    nodemon:
+      dev:
+        options:
+          file: 'server.js'
+          ignoredFiles: [
+            "*.css"
+            "*.styl"
+            "*.jade"
+            "*.js"
+            ".slugignore"
+            "app/coffee/public/*"
+            "app/public/*"
+            "readme*"
+            "Gruntfile*"
+            "Makefile*"
+            "Procfile*"
+          ]
+          # watchedExtensions: ['js']
+          # watchedFolders: ['test', 'tasks']
+          # env: {}
+          # cwd: __dirname
+          debug: true
+          delayTime: 1
+
+    concurrent:
+      dev:
+        tasks: ['nodemon', 'watch']
+        options:
+          logConcurrentOutput: true
+      compile:
+        tasks: ['stylus', 'coffee']
+
+    notify:
+      compiled:
+        options:
+          message: 'Assets compiled'
+      coffee:
+        options:
+          message: 'Coffee compiled'
+      stylus:
+        options:
+          message: 'Stylus compiled'
 
     watch:
       options:
@@ -67,48 +99,26 @@ module.exports = (grunt) ->
         nospawn: true
 
       stylus:
-        files: [
-          "<%= stylus.app.files[0].cwd %>/**/*.styl"
-          "<%= stylus.extension.files[0].cwd %>/**/*.styl"
-        ]
-        tasks: ["stylus"]
+        files: "<%= stylus.app.files[0].cwd %>/**/*.styl"
+        tasks: ["stylus", "notify:stylus"]
 
-      coffee_app:
-        files: [
-          "<%= coffee.app.files[0].cwd %>/**/*.coffee"
-        ]
-        tasks: ["coffee:app"]
-
-    # concat:
-    #   dist:
-    #     src: ["<banner>", "public/js/*.js"]
-    #     dest: "<%= dirs.dest %>/public/js/main.js"
-
-    # copy:
-    #   dist:
-    #     files:
-    #       "<%= dirs.dest %>/": "./*"
-    #       "<%= dirs.dest %>/config/": "./config/**"
-    #       "<%= dirs.dest %>/routes/": "./routes/**"
-    #       "<%= dirs.dest %>/views/": "./views/**"
-    #       "<%= dirs.dest %>/public/css/": "./public/css/**"
-    #       "<%= dirs.dest %>/public/images/": "./public/images/**"
-
-    watch:
-      options:
-        interrupt: true
-        nospawn: true
-
-      stylus:
-        files: "<%= stylus.compile.src %>"
-        tasks: ["stylus"]
+      coffee:
+        files: "<%= coffee.app.files[0].cwd %>/**/*.coffee"
+        tasks: ["coffee", "notify:coffee"]
 
       jshint:
         files: "<%= jshint.files %>"
         tasks: ["jshint"]
 
-  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  # load all grunt related modules from package.json
+  require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks)
 
+  grunt.registerTask "compile", [
+    "concurrent:compile"
+    'notify:compiled'
+  ]
 
-  # "coffee",
-  grunt.registerTask "default", ["coffee", "stylus", "watch"]
+  grunt.registerTask "default", [
+    "compile"
+    "concurrent:dev"
+  ]
