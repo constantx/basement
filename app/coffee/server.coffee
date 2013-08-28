@@ -1,16 +1,15 @@
 # hello dolly
 require('coffee-script')
 require('colors')
-express = require("express")
-http    = require("http")
-path    = require("path")
-fs      = require("fs")
-routes  = require("./routes")
-app     = express()
-server  = http.createServer(app)
-IO      = require("socket.io").listen(server)
-PORT    = process.env.PORT or 5000
-
+express  = require("express")
+http     = require("http")
+path     = require("path")
+fs       = require("fs")
+routes   = require("./routes")
+app      = express()
+server   = http.createServer(app)
+IO       = require("socket.io").listen(server)
+PORT     = process.env.PORT or 5000
 
 # Configuration
 app.configure ->
@@ -43,7 +42,7 @@ unless module.parent
   server.listen app.get("port"), ->
     console.log """\n
     ==================================================
-    Express server running on: #{app.get("port")}
+    Express server running on: http://localhost:#{app.get("port")}
     ==================================================
     """.green
 

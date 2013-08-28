@@ -51,7 +51,7 @@
 
   if (!module.parent) {
     server.listen(app.get("port"), function() {
-      return console.log(("\n\n==================================================\nExpress server running on: " + (app.get("port")) + "\n==================================================").green);
+      return console.log(("\n\n==================================================\nExpress server running on: http://localhost:" + (app.get("port")) + "\n==================================================").green);
     });
   }
 
