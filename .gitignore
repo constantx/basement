@@ -1,3 +1,12 @@
+# Compiled JS
+###################
+public/js/*.js
+!public/js/libs/**/*.js
+
+# Compiled CSS
+###################
+public/css/*.css
+
 # Compiled source #
 ###################
 *.com
