@@ -1,0 +1,31 @@
+---
+language: node_js
+node_js:
+  - "0.10"
+
+branches:
+  only:
+    - master
+
+before_script:
+  # install packages
+  - npm install
+  - npm install grunt-cli
+  # compile app
+  - ./node_modules/.bin/grunt build
+
+notifications:
+  email:
+    recipients:
+      - constantx@gmail.com
+    on_success: change
+    on_failure: always
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: dQ2Mu0tVsOWyOVQg+WrFmV97dgGwgIg0UZD1rgRB4fJHdMgxOCWOLnlsFiPfm72LtT4cF1D8bn6kTdX9TeGYGf5n5N6C6bUvNNKRhOeo1G58ELIq9po14eNNWY4hah7J8FEGtP/S8qB+FsQTGWDaVC6/BH/qy0JTDusCrik9mMc=
+  app: basement
+  on:
+    repo: constantx/basement
+  skip_cleanup: true
