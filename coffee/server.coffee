@@ -54,8 +54,14 @@ IO.configure "development", ->
 
 IO.configure "production", ->
   # enable all transports (optional if you want flashsocket)
-  IO.set "transports", ["websocket", "flashsocket", "htmlfile", "xhr-polling", "jsonp-polling"]
-  IO.set "polling duration", 10 # heroku polling duration
+  IO.set "transports", [
+    "websocket"
+    "flashsocket"
+    "htmlfile"
+    "xhr-polling"
+    "jsonp-polling"
+  ]
+  IO.set "polling duration", 3 # heroku polling duration
   IO.enable "browser client minification" # send minified client
   IO.enable "browser client etag" # apply etag caching logic based on version number
   IO.enable "browser client gzip" # gzip the file
