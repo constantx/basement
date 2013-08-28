@@ -14,7 +14,8 @@
     "jade": "0.27.6",
     "socket.io": "0.9.6",
     "coffee-script": "~1.6.3",
-    "colors": "~0.6.2"
+    "colors": "~0.6.2",
+    "grunt-cli": "~0.1.9"
   },
   "devDependencies": {
     "nib": "~0.9.1",
