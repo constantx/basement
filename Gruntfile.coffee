@@ -113,12 +113,17 @@ module.exports = (grunt) ->
   # load all grunt related modules from package.json
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks)
 
+  grunt.registerTask "default", [
+    "compile"
+    "concurrent:dev"
+  ]
+
   grunt.registerTask "compile", [
     "concurrent:compile"
     'notify:compiled'
   ]
 
-  grunt.registerTask "default", [
+  grunt.registerTask "build", [
     "compile"
-    "concurrent:dev"
   ]
+
