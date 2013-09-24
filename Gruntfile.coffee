@@ -38,18 +38,6 @@ module.exports = (grunt) ->
           ext: ".css"
         ]
 
-    coffee:
-      app:
-        options:
-          compress: false
-        files: [
-          expand: true
-          cwd: "<%= dirs.app %>/coffee"
-          src: ["**/*.coffee"]
-          dest: "<%= dirs.app %>/"
-          ext: ".js"
-        ]
-
     nodemon:
       dev:
         options:
@@ -60,7 +48,6 @@ module.exports = (grunt) ->
             "*.jade"
             "*.js"
             ".slugignore"
-            "app/coffee/public/*"
             "app/public/*"
             "readme*"
             "Gruntfile*"
@@ -80,15 +67,12 @@ module.exports = (grunt) ->
         options:
           logConcurrentOutput: true
       compile:
-        tasks: ['stylus', 'coffee']
+        tasks: ['stylus']
 
     notify:
       compiled:
         options:
           message: 'Assets compiled'
-      coffee:
-        options:
-          message: 'Coffee compiled'
       stylus:
         options:
           message: 'Stylus compiled'
@@ -101,10 +85,6 @@ module.exports = (grunt) ->
       stylus:
         files: "<%= stylus.app.files[0].cwd %>/**/*.styl"
         tasks: ["stylus", "notify:stylus"]
-
-      coffee:
-        files: "<%= coffee.app.files[0].cwd %>/**/*.coffee"
-        tasks: ["coffee", "notify:coffee"]
 
       jshint:
         files: "<%= jshint.files %>"

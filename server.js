@@ -1,4 +1,10 @@
+/*jslint indent:2, node:true*/
+/*global require:false*/
+
+
 (function() {
+  "use strict";
+
   var IO, PORT, app, express, fs, http, path, routes, server;
 
   require('coffee-script');
