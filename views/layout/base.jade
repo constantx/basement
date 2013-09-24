@@ -7,7 +7,7 @@ html
     meta(charset='utf-8')
 
     //- mobile!
-    meta(name='viewport', content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height')
+    meta(name='viewport', content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width')
 
     //- Makes your prototype chrome-less once bookmarked to your phone's home screen
     meta(name='apple-mobile-web-app-capable', content='yes')
@@ -28,11 +28,11 @@ html
     meta(name="copyright", content="")
 
     //- facebook open graph protocol
-    meta(property="og:title", content="")
-    meta(property="og:type", content="")
-    meta(property="og:url", content="")
+    meta(property="og:site_name", content="basement")
+    meta(property="og:title", content="constantx basement grid styleguide")
+    meta(property="og:type", content="website")
+    meta(property="og:url", content="http://constantx.github.io/basement")
     meta(property="og:image", content="")
-    meta(property="og:site_name", content="")
     meta(property="fb:page_id", content="")
     meta(property="og:description", content="")
 
@@ -43,23 +43,25 @@ html
     script(src="/socket.io/socket.io.js")
     script(src="/js/libs/require-2.0.2.min.js", data-main="js/main")
 
-    title
+    title basement
 
   body
-    #main-container
-      #main-header
-        block main-header
-          .cwrapper
+    .main-container
+      header.main-header
+        .container
+          block main-header
+            h1.logo
+              a(href="/", title="basement grid") basement
 
-      #main-content
+      .main-content
         block main-content
-          .cwrapper
+          .container
             #page-content
               block page-content
             #sidebar
               block sidebar
-      #main-footer
+      .main-footer
         block main-footer
-          .cwrapper
+          .container
             p
               | design, slice, and hack!
