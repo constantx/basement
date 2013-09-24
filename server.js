@@ -61,7 +61,7 @@
 
   IO.configure("production", function() {
     IO.set("transports", ["websocket", "flashsocket", "htmlfile", "xhr-polling", "jsonp-polling"]);
-    IO.set("polling duration", 10);
+    IO.set("polling duration", 3);
     IO.enable("browser client minification");
     IO.enable("browser client etag");
     IO.enable("browser client gzip");

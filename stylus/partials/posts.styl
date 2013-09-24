@@ -1,0 +1,136 @@
+// push paragraph and list to the right side
+.hentry
+  position: relative
+
+  .entry-title
+    @extend .heading
+    position: relative
+    z-index: 2000
+    setHeading(3.375)
+    font-family: font_heading
+    padding: 2em 0
+    @media only screen and (max-width: 1366px)
+      setHeading(3.375)
+    @media only screen and (max-width: 769px)
+      text-align: center
+      setHeading(3.122)
+    @media only screen and (max-width: 480px)
+      setHeading(2.25)
+
+  .entry-cover
+    position: absolute
+    z-index: 0
+    top: 0
+    left: 0
+    right: 0
+    text-align: center
+    img
+      width: 100%
+      height: auto
+
+  .meta-info
+    font-family: font_sans
+    font-size: 0.7273em
+    color: color_meta
+    text-transform: uppercase
+
+  .post-teaser-link
+    font-weight: bold
+    text-align: right
+    a
+      padding-right: 0.5em
+      border-bottom: none
+      border-right: solid 0.5em color_main
+      transition: border-width 0.1s ease-in
+      &:hover
+        border-width: 1em
+        border-color: color_main_cool
+
+  .entry-content-wrapper
+    position: relative
+    z-index: 1000
+    padding-top: 1em
+    background: color_bgr
+
+
+  .entry-content
+    position: relative
+    p, blockquote, ul, ol, h1, h2, h3, h4, h5, h6, pre[class*="language-"], .post-meta, .post-social
+      @extend .offset-4
+      @media only screen and (max-width: 769px)
+        margin-left: 0
+
+    pre[class*="language-"]
+      margin-bottom: 2em
+
+    h1, h2, h3, h4, h5, h6
+      padding: 0.5em 0
+      font-family: font_serif
+      text-align: center
+      font-style: italic
+
+    ul
+      list-style: square
+      list-style-position: inside
+      margin-bottom: 1em
+
+    ol
+      list-style-position: inside
+      list-style-type: decimal
+      margin-bottom: 1em
+
+    blockquote
+      font-style: italic
+      border-left: solid 0.5em color_meta
+      padding-left: 0.5em
+      p
+        margin-left: 10%
+
+    p
+      margin-bottom: 1em
+      img
+        max-width: 100%
+        height: auto
+
+  .author-photo
+    position: absolute
+    z-index: 2000
+    left: 0
+    top: 0
+    font-family: font_sans
+    color: color_meta
+    text-align: center
+    a
+      display: block
+
+    @media only screen and (max-width: 769px)
+      position: relative
+      width: 10em !important
+      max-width: 50%
+      margin-left: auto
+      margin-right: auto
+
+  .post-meta
+    margin-bottom: 1em
+    @media only screen and (max-width: 769px)
+      text-align: center
+
+  .post-social
+    padding-top: 0.5em
+    border-top: solid 0.3em color_border
+
+.hentry-has-cover
+  .entry-title
+    color: rgba(color_light, 0.95)
+    text-shadow: 1px 2px 3px rgba(0,0,0,0.3)
+    padding-top: 20%
+    padding-bottom: 20%
+  .entry-content-wrapper
+    padding-top: 3em
+
+.posts
+  .hentry
+    border-bottom: solid 1px color_border
+    margin-bottom: 1em
+    &:last-child
+      border-bottom: none

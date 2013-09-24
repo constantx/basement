@@ -1,4 +1,76 @@
 extends layout/base
 
-block page-content
-  h1#hello
+block main-content
+  article.hentry.hentry-single.hentry-has-cover
+    header.container
+      h2.entry-title#hello ?
+
+    .entry-cover
+      img(src='/img/cover.jpg', alt='basement cover')
+
+    .entry-content-wrapper
+      .container
+        .entry-content
+          aside.post-meta.meta-info
+            .author-photo.col.col-3
+              a(href='//github.com/constantx')
+                img.circular.cover(src='https://0.gravatar.com/avatar/bdd22ad361650cddb58011e5d301e67b?d=https%3A%2F%2Fidenticons.github.com%2F78111570a7c73234b9c1d28182759030.png&s=420', alt='')
+
+            span.byline.author.vcard Author: Truong Nguyen  |  
+
+            time.published(datetime='2014-09-20T07:00:00.000Z', pubdate='pubdate') 20 September 2014
+
+          p
+            | This is a basic styleguide with all elements supported by my fork of punch-blog. You'll find heading, paragraph, strong, em, photo, codeblock, blockquote, photos.
+
+          h1 Heading 1
+          h2 Heading 2
+          h3 Heading 3
+          h4 Heading 4
+          h5 Heading 5
+          h6 Heading 6
+
+          p
+            | Lorem ipsum dolor sit amet,
+            em consectetur adip isicing elit
+            | , sed do eiusmodtempor incididunt ut labore et dolore magna aliqua.
+            strong Cupcake ipsum dolor
+            | sit amet gingerbread I love wafer tiramisu. Chocolate bar gummi bears dragée tiramisu.
+            a(href='/') Link topping
+            | chocolate marzipan dessert. Donut pie I love pie cupcake. Lollipop apple pie carrot cake cheesecake fruitcake sugar plum I love muffin.
+
+          blockquote
+            p
+              | This is a blockquote. Lorem ipsum dolor sit amet, consectetur adip
+              em  isicing elit, sed do eiusmod
+              | tempor incididunt ut labore et dolore magna aliqua.
+
+          h2 Photos
+          p
+            img(src='/img/cover.jpg', alt='cat? by constantx')
+
+          h2 codeblock
+          p
+            | Using&nbsp;
+            a(href='http://prismjs.com/') Prism.js
+            | &nbsp;for automatic syntax highlighting.
+            | Code block highlighted via prism.js:
+          pre.
+
+          h2 unordered list
+          p
+            | There are several other nifty features like that on Punch-blog. Here's a small list:
+          ul
+            li a list item
+            li another list item
+            li strange list item
+
+          h2 ordered list
+          ol
+            li Manage other pages with Punch's default content handler.
+            li Extend the behavior by writing your own helpers.
+            li This is so sexy and awesome right?
+
+          p Happy Blogging!
+
+          aside.post-social(role='social-media')
