@@ -28,11 +28,14 @@
       width: 100%
       height: auto
 
-  .meta-info
+  .entry-meta
     font-family: font_sans
     font-size: 0.7273em
     color: color_meta
     text-transform: uppercase
+    margin-bottom: 1em
+    @media only screen and (max-width: 769px)
+      text-align: center
 
   .post-teaser-link
     font-weight: bold
@@ -55,7 +58,7 @@
 
   .entry-content
     position: relative
-    p, blockquote, ul, ol, h1, h2, h3, h4, h5, h6, pre[class*="language-"], .post-meta, .post-social
+    p, blockquote, ul, ol, h1, h2, h3, h4, h5, h6, pre[class*="language-"], .post-meta, .entry-social
       @extend .offset-4
       @media only screen and (max-width: 769px)
         margin-left: 0
@@ -92,7 +95,7 @@
       p
         margin-left: 10%
 
-  .author-photo
+  .entry-author-photo
     position: absolute
     z-index: 2000
     left: 0
@@ -110,12 +113,7 @@
       margin-left: auto
       margin-right: auto
 
-  .post-meta
-    margin-bottom: 1em
-    @media only screen and (max-width: 769px)
-      text-align: center
-
-  .post-social
+  .entry-social
     padding-top: 0.5em
     border-top: solid 0.3em color_border
 
