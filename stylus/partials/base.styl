@@ -40,8 +40,8 @@ Pixels  Ems Ems @ 16  % of 13
 1.462 0.081 0.091 11.246
 1.053 0.059 0.066 8.100
 */
-color_main        = #faad33
-color_main_cool   = #33b3e2
+color_main        = #f4524e
+color_main_cool   = #4ebae2
 color_light       = #fff
 color_text        = #404041
 color_dark        = #2a2a2a
@@ -67,7 +67,7 @@ font_meta         = "Panic Sans", inconsolata, Monaco, 'Courier New', monospace
 // grid settings
 numCol            = 1..12
 colGutter         = 1.5%
-width_main        = (1280/base_font_size_px)em
+width_main        = (1366/base_font_size_px)em
 
 /////////////////////////////////////////////////////// RESET!
 @css {
@@ -189,7 +189,7 @@ for num in numCol
   .offset-{num}
     margin-left: calWidth(num)
 
-/////////////////////////////////////////////////////// Responsive
+/////////////////////////////////////////////////////// Responsive Grid
 @media only screen and (max-width: 769px)
   // make normal column become full width
   .col
@@ -218,16 +218,16 @@ body
   line-height: base_leading
   color: color_text
   background-color: color_bgr
-  @media only screen and (max-width: 1366px)
-    font-size: 125%
-  @media only screen and (max-width: 769px)
-    font-size: 112.5% // 18px
-  @media only screen and (max-width: 480px)
+  @media only screen and (min-width: 480px)
     font-size: 100% // 16px
+  @media only screen and (min-width: 769px)
+    font-size: 112.5% // 18px
+  @media only screen and (min-width: 1366px)
+    font-size: 125% // 20px
 
 h1,h2,h3,h4,h5,h6
   font-family: font_heading
-  font-weight: normal
+  font-weight: bold
   margin: 0
 
 h1
