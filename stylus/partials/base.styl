@@ -194,8 +194,6 @@ for num in numCol
   // make normal column become full width
   .col
     float: none
-    padding-left: 2%
-    padding-right: 2%
     width: 100% !important
 
   // make mobile grid
@@ -214,16 +212,16 @@ body
   margin: 0
   padding: 0
   font-family: font_text
-  font-size: base_font_size
+  font-size: 100%
   line-height: base_leading
   color: color_text
   background-color: color_bgr
-  @media only screen and (min-width: 480px)
-    font-size: 100% // 16px
   @media only screen and (min-width: 769px)
     font-size: 112.5% // 18px
+  @media only screen and (min-width: 1024px)
+    font-size: 125% // 18px
   @media only screen and (min-width: 1366px)
-    font-size: 125% // 20px
+    font-size: base_font_size // 20px
 
 h1,h2,h3,h4,h5,h6
   font-family: font_heading
@@ -271,14 +269,6 @@ blockquote
 
 .circular
   border-radius: 50%
-
-.centered
-  display: inline-block
-  margin-left: auto
-  margin-right: auto
-
-.centered-content
-  text-align: center
 
 // prevent FOUT
 .wf-loading
