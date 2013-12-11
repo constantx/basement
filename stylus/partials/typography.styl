@@ -1,0 +1,53 @@
+/////////////////////////////////////////////////////// Base Typography
+
+body
+  margin: 0
+  padding: 0
+  font-family: font_text
+  font-size: 100%
+  line-height: base_leading
+  color: color_text
+  background-color: color_bgr
+  @media only screen and (min-width: 769px)
+    font-size: 112.5% // 18px
+  @media only screen and (min-width: 1024px)
+    font-size: 125% // 18px
+  @media only screen and (min-width: 1366px)
+    font-size: base_font_size // 20px
+
+h1,h2,h3,h4,h5,h6
+  font-family: font_heading
+  font-weight: bold
+  margin: 0
+
+h1
+  setHeading(3.375)
+h2
+  setHeading(2.081)
+h3
+  setHeading(1.5)
+h4
+  setHeading(1.387)
+h5
+  setHeading(1)
+h6
+  setHeading(0.925)
+
+a
+  color: color_text
+  text-decoration: none
+
+p, ul, ol
+  a
+    border-bottom: solid 2px color_main
+    transition: border-color 0.2s ease-in
+    &:hover
+      border-bottom-color: color_main_cool
+
+strong
+  font-weight: bold
+
+blockquote
+  margin-left: 0
+  margin-right: 0
+  position: relative

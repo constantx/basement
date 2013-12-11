@@ -1,0 +1,61 @@
+@import 'partials/var'
+@import 'partials/reset'
+@import 'partials/grid'
+@import 'partials/typography'
+
+/////////////////////////////////////////////////////// Common Layout Helpers
+
+.cover
+  width: 100%
+  height: auto
+
+.circular
+  border-radius: 50%
+
+// prevent FOUT
+.wf-loading
+  h1,h2,h3,h5,h6,p,a
+    visibility: hidden
+
+.wf-inactive
+.wf-active
+  h1,h2,h3,h5,h6,p,a
+    visibility: visible
+
+/////////////////////////////////////////////////////// Common Layout Helpers
+.logo
+  display: block
+  padding: 1em 0
+  font-family: font_serif
+  text-align: center
+  font-weight: normal
+  color: color_text
+  setHeading(2.25)
+  @media only screen and (max-width: 769px)
+    setHeading(1.5)
+
+.main-header
+  position: relative
+  z-index: 1000
+  background-color: color_light
+  padding: 1em 0
+  border-bottom: solid 1px color_border
+
+.main-nav
+  padding: 1em 0
+  .main-nav-items
+    list-style: none
+    text-align: center
+  .main-nav-item
+    font-size: 1em
+    margin: 0 1em
+    display: inline-block
+    text-transform: uppercase
+    letter-spacing: 0.1em
+
+.main-footer
+  text-align: center
+  margin-top: 2em
+  padding: 1em 0
+  border-top: solid 1px color_border
+  background-color: color_light
