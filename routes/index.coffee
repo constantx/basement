@@ -53,15 +53,12 @@ exports.index = (req, res) ->
 
         dateNow = new Date(dateString + ' ' + [hour, time[1]].join ':')
         minDiff = (((Math.abs dateNow - date)/1000)/60)
-        console.log date, dateNow
-        console.log minDiff
 
         # If within 15 minutes of game, search for stream
         if minDiff < 15
           getStream newGame.hTeam, dateStringId
 
-        if x is 1
-          getStream newGame.hTeam, dateStringId
+        # I don't know if I actually need this but too lazy to check
         x += 1
 
         if x is xmlGames.length
