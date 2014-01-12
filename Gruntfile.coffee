@@ -55,7 +55,6 @@ module.exports = (grunt) ->
             "*.css"
             "*.styl"
             "*.jade"
-            "*.js"
             ".slugignore"
             ".git"
             "app/public/*"

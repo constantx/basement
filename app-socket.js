@@ -4,6 +4,8 @@
 (function () {
   "use strict";
 
+  var schedule = require('./modules/Schedule');
+
   exports = module.exports = function (server) {
     var io = require("socket.io").listen(server);
 
@@ -21,11 +23,9 @@
     });
 
     io.sockets.on("connection", function (socket) {
-      return socket.on("hello", function () {
-        return socket.emit("hello-back", {
-          data: "the basement"
-        });
-      });
+
+      socket.emit("game:schedule", schedule);
+
     });
 
     return io;

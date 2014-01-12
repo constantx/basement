@@ -2,7 +2,6 @@
 *.css
 *.styl
 *.jade
-*.js
 .slugignore
 .git
 app/public/*

@@ -1,18 +1,14 @@
 require('coffee-script')
-request       = require 'request'
-parseXML      = require('xml2js')
-StreamsDigger = require '../modules/StreamsDigger'
-games         = require '../modules/Schedule'
-
-console.log(games);
+request  = require 'request'
+parseXML = require('xml2js')
 
 #
 # * GET home page.
 #
+
 exports.index = (req, res) ->
   res.render "index",
     title: "basement"
-    games: JSON.stringify(games)
 
   # if Object.keys(games).length is not 0
 

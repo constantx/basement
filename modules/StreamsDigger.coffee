@@ -1,5 +1,4 @@
 request = require 'request'
-games   = require './schedule'
 io      = require '../app-socket'
 
 exports = module.exports =

@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var PORT, app, express, fs, http, path, mongoose, routes, server;
+  var io, PORT, app, express, fs, http, path, mongoose, routes, server;
 
   require('coffee-script');
 
@@ -26,6 +26,8 @@
   app = express();
 
   server = http.createServer(app);
+
+  io = require('./app-socket')(server);
 
   PORT = process.env.PORT || 5000;
 
