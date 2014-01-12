@@ -1,6 +1,6 @@
 require('coffee-script')
 request       = require 'request'
-parseXML      = require('xml2js').parseString
+parseXML      = require('xml2js')
 StreamsDigger = require '../modules/StreamsDigger'
 games         = require '../modules/schedule'
 
@@ -8,6 +8,7 @@ games         = require '../modules/schedule'
 # * GET home page.
 #
 exports.index = (req, res) ->
+
   if Object.keys(games).length is 0
     url = "http://www.nfl.com/ajax/scorestrip?season=2013&seasonType=POST&week="
 
@@ -28,7 +29,7 @@ exports.index = (req, res) ->
 
 
     request url + week, (err, resp, body) ->
-      parseXML body, (err, json) ->
+      parseXML.parseString body, (err, json) ->
         months = ['January', 'February']
         xmlGames = json.ss.gms[0].g
         x = 0

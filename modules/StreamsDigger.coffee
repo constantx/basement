@@ -4,9 +4,10 @@ io      = require '../app-socket'
 
 exports = module.exports =
 
-  getStream = (team, id, cb) ->
+  getStream: (team, id, cb) ->
 
-    if !team or !id then return
+    return if !team or !id
+
 
     i = 1
 
@@ -20,7 +21,7 @@ exports = module.exports =
             team: team
           console.log team + ' stream is ' + streamURL
           games[id].stream = streamURL
-          if cb cb(streamURL)
+          if cb then cb(streamURL)
         else
           console.log i
           getURL()
