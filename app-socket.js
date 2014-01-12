@@ -4,7 +4,7 @@
 (function () {
   "use strict";
 
-  var schedule = require('./modules/Schedule');
+  var schedule = require('./models/Schedule');
 
   exports = module.exports = function (server) {
     var io = require("socket.io").listen(server);

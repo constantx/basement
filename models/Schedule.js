@@ -6,7 +6,7 @@
 
   var schedule = {};
   var leagues = ['nfl'];
-  var scheduleDigger = require('./ScheduleDigger');
+  var scheduleDigger = require('../modules/ScheduleDigger');
 
   scheduleDigger.once('data', function(league, data){
     schedule[league] = data;
