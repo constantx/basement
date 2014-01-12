@@ -8,7 +8,7 @@ games = require './schedule'
 # * GET home page.
 #
 exports.index = (req, res) ->
-  if !games or games.length is 0
+  if Object.keys(games).length is 0
     url = "http://www.nfl.com/ajax/scorestrip?season=2013&seasonType=POST&week="
 
     date = new Date()
@@ -47,24 +47,27 @@ exports.index = (req, res) ->
           if !games[dateStringId]
             games[dateStringId] = newGame
 
-          time = game.t.split ':'
+          time = game.t.split 'pm'
+
+          gameDate = new Date(dateString + ' ' + time)
 
           # 24-hour clock + difference between UTC (EDT games)
-          hour = parseInt(time[0], 10) + 12 - 5
+          gameDate.setHours(parseInt(gameDate.getHours(),10) + 17)
 
-          dateNow = new Date(dateString + ' ' + [hour, time[1]].join ':')
-          minDiff = (((Math.abs dateNow - date)/1000)/60)
+          minDiff = Math.floor(((Math.abs gameDate - date)/1000)/60)
+          console.log minDiff
 
           # If within 15 minutes of game, search for stream
-          if minDiff < 15
+          if minDiff < 60
             getStream newGame.hTeam, dateStringId
 
-          console.log date, dateNow, minDiff
+            console.log date, gameDate, minDiff, newGame.hTeam
 
           # I don't know if I actually need this but too lazy to check
           x += 1
 
           if x is xmlGames.length
+            console.log games
 
             res.render "index",
               title: "basement"

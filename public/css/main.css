@@ -369,3 +369,6 @@ blockquote {
 .game {
   margin-bottom: 1em;
 }
+.streamURL {
+  word-break: break-all;
+}
