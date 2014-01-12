@@ -1,8 +1,8 @@
 require('coffee-script')
-request = require 'request'
-parseXML = require('xml2js').parseString
-getStream = require './getStream'
-games = require './schedule'
+request       = require 'request'
+parseXML      = require('xml2js').parseString
+StreamsDigger = require '../modules/StreamsDigger'
+games         = require '../modules/schedule'
 
 #
 # * GET home page.
@@ -11,12 +11,21 @@ exports.index = (req, res) ->
   if Object.keys(games).length is 0
     url = "http://www.nfl.com/ajax/scorestrip?season=2013&seasonType=POST&week="
 
-    date = new Date()
-    week = 19
+    ###*
+     * get current week number
+     * TODO: extract this out of here into utils
+     * @return {Number} week number
+    ###
+    Date.prototype.getWeek = ->
+      onejan = new Date(this.getFullYear(),0,1);
+      return Math.ceil((((this - onejan) / 86400000) + onejan.getDay()+1)/7)
 
-    # Don't even care
-    week = 20 if date.getDate() > 12
-    week = 22 if date.getDate() is 2
+
+    date = new Date()
+    week = date.getWeek()
+
+    console.log("week is #{week}")
+
 
     request url + week, (err, resp, body) ->
       parseXML body, (err, json) ->
@@ -59,7 +68,7 @@ exports.index = (req, res) ->
 
           # If within 15 minutes of game, search for stream
           if minDiff < 60
-            getStream newGame.hTeam, dateStringId
+            StreamsDigger.getStream newGame.hTeam, dateStringId
 
             console.log date, gameDate, minDiff, newGame.hTeam
 

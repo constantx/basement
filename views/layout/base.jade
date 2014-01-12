@@ -65,8 +65,8 @@ html
 
   script(src="/socket.io/socket.io.js")
   script.
-    var socket = io.connect('http://localhost')
-    socket.on('stream', function (data) {
+    var socket = io.connect()
+    socket.on('game:schedule', function (data) {
       var stream = document.querySelector('#' + data.team);
       stream.innerText = data.url;
     });

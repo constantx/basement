@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var io, PORT, app, express, fs, http, path, mongoose, routes, server;
+  var PORT, app, express, fs, http, path, mongoose, routes, server;
 
   require('coffee-script');
 
@@ -26,8 +26,6 @@
   app = express();
 
   server = http.createServer(app);
-
-  io = require("socket.io").listen(server);
 
   PORT = process.env.PORT || 5000;
 
@@ -62,28 +60,5 @@
       return console.log(("\n\n==================================================\nExpress server running on: http://localhost:" + (app.get("port")) + "\n==================================================").green);
     });
   }
-
-  io.configure("development", function () {
-    return io.set("log level", 2);
-  });
-
-  io.configure("production", function () {
-    io.set("transports", ["websocket", "flashsocket", "htmlfile", "xhr-polling", "jsonp-polling"]);
-    io.set("polling duration", 3);
-    io.enable("browser client minification");
-    io.enable("browser client etag");
-    io.enable("browser client gzip");
-    return io.set("log level", 1);
-  });
-
-  io.sockets.on("connection", function (socket) {
-    return socket.on("hello", function () {
-      return socket.emit("hello-back", {
-        data: "the basement"
-      });
-    });
-  });
-
-  exports.io = io;
 
 }).call(this);
