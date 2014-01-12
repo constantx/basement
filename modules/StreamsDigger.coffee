@@ -6,7 +6,7 @@ exports = module.exports =
 
   getStream = (team, id, cb) ->
 
-    return if !team or !id
+    if !team or !id then return
 
     i = 1
 

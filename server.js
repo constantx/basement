@@ -38,7 +38,7 @@
     app.use(express.bodyParser());
     app.use(express.methodOverride());
     app.use(app.router);
-    return app.use(express["static"](path.join(__dirname, "public/")));
+    app.use(express["static"](path.join(__dirname, "public/")));
   });
 
   app.configure("development", function () {
@@ -46,7 +46,7 @@
       dumpExceptions: true,
       showStack: true
     }));
-    return app.locals.pretty = true;
+    app.locals.pretty = true;
   });
 
   app.configure("production", function () {
