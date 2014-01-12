@@ -56,8 +56,17 @@ html
       .main-content
         .container
           block main-content
+            p test
 
       .main-footer
         block main-footer
           .container
             p brought to you by Canadians
+
+  script(src="/socket.io/socket.io.js")
+  script.
+    var socket = io.connect('http://localhost')
+    socket.on('stream', function (data) {
+      var stream = document.querySelector('#' + data.team);
+      stream.innerText = data.url;
+    });

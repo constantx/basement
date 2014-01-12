@@ -5,7 +5,7 @@
 (function() {
   "use strict";
 
-  var IO, PORT, app, express, fs, http, path, routes, server;
+  var io, PORT, app, express, fs, http, path, routes, server;
 
   require('coffee-script');
 
@@ -25,7 +25,7 @@
 
   server = http.createServer(app);
 
-  IO = require("socket.io").listen(server);
+  io = require("socket.io").listen(server);
 
   PORT = process.env.PORT || 5000;
 
@@ -61,25 +61,27 @@
     });
   }
 
-  IO.configure("development", function() {
-    return IO.set("log level", 2);
+  io.configure("development", function() {
+    return io.set("log level", 2);
   });
 
-  IO.configure("production", function() {
-    IO.set("transports", ["websocket", "flashsocket", "htmlfile", "xhr-polling", "jsonp-polling"]);
-    IO.set("polling duration", 3);
-    IO.enable("browser client minification");
-    IO.enable("browser client etag");
-    IO.enable("browser client gzip");
-    return IO.set("log level", 1);
+  io.configure("production", function() {
+    io.set("transports", ["websocket", "flashsocket", "htmlfile", "xhr-polling", "jsonp-polling"]);
+    io.set("polling duration", 3);
+    io.enable("browser client minification");
+    io.enable("browser client etag");
+    io.enable("browser client gzip");
+    return io.set("log level", 1);
   });
 
-  IO.sockets.on("connection", function(socket) {
+  io.sockets.on("connection", function(socket) {
     return socket.on("hello", function() {
       return socket.emit("hello-back", {
         data: "the basement"
       });
     });
   });
+
+  exports.io = io
 
 }).call(this);
