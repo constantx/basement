@@ -16,6 +16,7 @@ module.exports = (team, id) ->
         console.log team + ' stream is ' + streamURL
         games[id].stream = streamURL
       else
+        console.log i
         getStream()
 
       i++

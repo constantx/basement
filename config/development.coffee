@@ -2,7 +2,7 @@
 "use strict"
 
 exports.common = {
-  
+
 }
 
 exports.client = {
@@ -10,5 +10,5 @@ exports.client = {
 }
 
 exports.server = {
-
+  mongoose: 'http://localhost/sportsstreams'
 }

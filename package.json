@@ -18,7 +18,8 @@
     "colors": "~0.6.2",
     "grunt-cli": "~0.1.9",
     "request": "~2.31.0",
-    "xml2js": "~0.4.1"
+    "xml2js": "~0.4.1",
+    "mongoose": "~3.8.4"
   },
   "devDependencies": {
     "nodemon": "~0.7.1",
