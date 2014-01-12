@@ -8,7 +8,6 @@ exports = module.exports =
 
     return if !team or !id
 
-
     i = 1
 
     getURL = ->

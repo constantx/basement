@@ -3,16 +3,18 @@ extends layout/base
 block main-content
   //- print the fucking URLs here
   for game in games
-    .game
-      p= game.gMonth + ' ' + game.gDay
-      p
-        span.margin #{game.sTime}pm -
-        if game.vScore != ""
-          span= game.vScore
-        span.margin= game.vTeam
-        span at
-        span.margin= game.hTeam
-        if game.hScore != ""
-          span= game.hScore
-      if game.active
-        p.streamURL.margin(id=game.hTeam)= game.stream
+    //- .game
+    //-   p= game.gMonth + ' ' + game.gDay
+    //-   p
+    //-     span.margin #{game.sTime}pm -
+    //-     if game.vScore != ""
+    //-       span= game.vScore
+    //-     span.margin= game.vTeam
+    //-     span at
+    //-     span.margin= game.hTeam
+    //-     if game.hScore != ""
+    //-       span= game.hScore
+    //-   if game.active
+    //-     p.streamURL.margin(id=game.hTeam)= game.stream
+
+    .game= games
