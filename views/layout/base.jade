@@ -41,7 +41,6 @@ html
 
     //- require.js and run main.js
     script(src="/socket.io/socket.io.js")
-    script(src="/js/libs/require-2.0.2.min.js", data-main="js/main")
 
     title basement
 
@@ -67,6 +66,8 @@ html
   script.
     var socket = io.connect(window.location.href)
 
-    socket.on('game:schedule', function (data) {
-      console.log('gotGameSchedule', data);
+    socket.on('game:schedule', function (league, data) {
+      console.log('gotGameSchedule', league, data);
     });
+
+
