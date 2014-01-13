@@ -38,6 +38,15 @@ module.exports = (grunt) ->
           ext: ".css"
         ]
 
+    karma:
+      unit:
+        configFile: 'karma.conf.js'
+        autoWatch: true
+      continuous:
+        configFile: 'karma.conf.js',
+        singleRun: true,
+        browsers: ['PhantomJS']
+
     nodemon:
       dev:
         options:
@@ -46,8 +55,8 @@ module.exports = (grunt) ->
             "*.css"
             "*.styl"
             "*.jade"
-            "*.js"
             ".slugignore"
+            ".git"
             "app/public/*"
             "readme*"
             "Gruntfile*"

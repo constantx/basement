@@ -28,10 +28,10 @@ html
     meta(name="copyright", content="")
 
     //- facebook open graph protocol
-    meta(property="og:site_name", content="basement")
-    meta(property="og:title", content="constantx basement grid styleguide")
+    meta(property="og:site_name", content="stream digger")
+    meta(property="og:title", content="stream digger")
     meta(property="og:type", content="website")
-    meta(property="og:url", content="http://constantx.github.io/basement")
+    meta(property="og:url", content="https://github.com/devinmcinnis/streamdigger")
     meta(property="og:image", content="")
     meta(property="fb:page_id", content="")
     meta(property="og:description", content="")
@@ -41,7 +41,6 @@ html
 
     //- require.js and run main.js
     script(src="/socket.io/socket.io.js")
-    script(src="/js/libs/require-2.0.2.min.js", data-main="js/main")
 
     title basement
 
@@ -51,17 +50,24 @@ html
         .container
           block main-header
             h1.logo
-              a(href="/", title="basement grid") basement
+              a(href="/", title="basement grid") stream dem all
 
       .main-content
-        block main-content
-          .container
-            #page-content
-              block page-content
-            #sidebar
-              block sidebar
+        .container
+          block main-content
+            p test
+
       .main-footer
         block main-footer
           .container
-            p
-              | design, slice, and hack!
+            p brought to you by Canadians
+
+  script(src="/socket.io/socket.io.js")
+  script.
+    var socket = io.connect(window.location.href)
+
+    socket.on('game:schedule', function (league, data) {
+      console.log('gotGameSchedule', league, data);
+    });
+
+

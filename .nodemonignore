@@ -2,8 +2,8 @@
 *.css
 *.styl
 *.jade
-*.js
 .slugignore
+.git
 app/public/*
 readme*
 Gruntfile*

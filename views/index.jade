@@ -1,82 +1,18 @@
 extends layout/base
 
 block main-content
-  article.hentry.hentry-single.hentry-has-cover
-    header.container
-      h2.entry-title#hello ?
-
-    .entry-cover
-      img(src='/img/cover.jpg', alt='basement cover')
-
-    .entry-content-wrapper
-      .container
-        .entry-content
-          aside.post-meta.entry-meta
-            .entry-author-photo.col.col-3
-              a(href='//github.com/constantx')
-                img.circular.cover(src='https://0.gravatar.com/avatar/bdd22ad361650cddb58011e5d301e67b?d=https%3A%2F%2Fidenticons.github.com%2F78111570a7c73234b9c1d28182759030.png&s=420', alt='')
-
-            span.byline.author.vcard Author: Truong Nguyen  |  
-
-            time.published(datetime='2014-09-20T07:00:00.000Z', pubdate='pubdate') 20 September 2014
-
-          h2 what is basement?
-
-          p
-            | <strong>basement</strong> is my open source boilerplate for a node.js framework. It's been serving me as a quick base to bring up a new node.js web app quickly over the year. Under the hood is:
-
-            ul
-              li
-                | <a href='http://jade-lang.com/' target="_blank">jade</a> template for HTML
-              li
-                | a tiny CSS framework written via stylus
-              li
-                | auto-compile of assets via grunt
-              li
-                | socket.io for realtime data
-
-          p
-            | Basement also comes with a tiny responsive CSS framework for blog post. This page itself servers a basic styleguide with all elements supported a blog article. You'll find heading, paragraph, strong, em, photo, codeblock, blockquote, photos.
-
-          h1 Heading 1
-          h2 Heading 2
-          h3 Heading 3
-          h4 Heading 4
-          h5 Heading 5
-          h6 Heading 6
-
-          blockquote
-            p
-              | This is a blockquote. Lorem ipsum dolor sit amet, consectetur adip
-              em  isicing elit, sed do eiusmod
-              | tempor incididunt ut labore et dolore magna aliqua.
-
-          h2 Photos
-          p
-            img(src='/img/cover.jpg', alt='cat? by constantx')
-
-          h2 codeblock
-          p
-            | Using&nbsp;
-            a(href='http://prismjs.com/') Prism.js
-            | &nbsp;for automatic syntax highlighting.
-            | Code block highlighted via prism.js:
-          pre.
-
-          h2 unordered list
-          p
-            | There are several other nifty features like that on Punch-blog. Here's a small list:
-          ul
-            li a list item
-            li another list item
-            li strange list item
-
-          h2 ordered list
-          ol
-            li Manage other pages with Punch's default content handler.
-            li Extend the behavior by writing your own helpers.
-            li This is so sexy and awesome right?
-
-          p Happy Blogging!
-
-          aside.entry-social(role='social-media')
+  //- print the fucking URLs here
+  for game in games
+    .game
+      p= game.gMonth + ' ' + game.gDay
+      p
+        span.margin #{game.sTime}pm -
+        if game.vScore != ""
+          span= game.vScore
+        span.margin= game.vTeam
+        span at
+        span.margin= game.hTeam
+        if game.hScore != ""
+          span= game.hScore
+      if game.active
+        p.streamURL.margin(id=game.hTeam)= game.stream

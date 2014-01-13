@@ -1,7 +1,50 @@
-@import 'base'
+@import 'partials/var'
+@import 'partials/reset'
+@import 'partials/grid'
+@import 'partials/typography'
 
-@import 'vendor/font-awesome'
-@import 'vendor/prism-theme'
+/////////////////////////////////////////////////////// Common Layout Helpers
 
-// has hentry blog structure
-@import 'posts'
+.cover
+  width: 100%
+  height: auto
+
+.circular
+  border-radius: 50%
+
+// prevent FOUT
+.wf-loading
+  h1,h2,h3,h5,h6,p,a
+    visibility: hidden
+
+.wf-inactive
+.wf-active
+  h1,h2,h3,h5,h6,p,a
+    visibility: visible
+
+/////////////////////////////////////////////////////// Common Layout Helpers
+.logo
+  display: block
+  padding: 1em 0
+  font-family: font_text
+  text-align: center
+  font-weight: normal
+  color: color_text
+  setHeading(2.25)
+  @media only screen and (max-width: 769px)
+    setHeading(1.5)
+
+.main-footer
+  font-size: 0.625em
+  text-align: center
+  margin-top: 2em
+  padding: 1em 0
+
+.margin
+  margin: 0 0.5em
+
+.game
+  margin-bottom: 1em
+
+.streamURL
+  word-break: break-all
