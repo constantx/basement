@@ -43,7 +43,7 @@
       gameDate.setHours(parseInt(gameDate.getHours(), 10) + 17);
       minDiff = Math.floor(((Math.abs(gameDate - date)) / 1000) / 60);
       console.log(minDiff);
-      if (minDiff < 120) {
+      if (minDiff < 60) {
         // try to find the right stream url and add it this game
         console.log(date, gameDate, minDiff, newGame.hTeam);
         StreamsDigger.getStream(game, newGame.hTeam);
