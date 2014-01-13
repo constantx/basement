@@ -4,9 +4,10 @@
 (function () {
   "use strict";
 
-  var schedule = {};
+  var SCHEDULE = {};
   var leagues = ['nfl'];
   var scheduleDigger = require('../modules/ScheduleDigger');
+  var StreamsDigger = require('../modules/StreamsDigger');
 
   var formatSchedule = function(league, json){
     var games = {}, date = new Date(), dateString, dateStringId, gId, game, gameDate, mNum, minDiff, months, newGame, time, x, xmlGames, _i, _len;
@@ -41,26 +42,33 @@
       gameDate = new Date(dateString + ' ' + time);
       gameDate.setHours(parseInt(gameDate.getHours(), 10) + 17);
       minDiff = Math.floor(((Math.abs(gameDate - date)) / 1000) / 60);
-      // console.log(minDiff);
-      if (minDiff < 60) {
-        StreamsDigger.getStream(newGame.hTeam, dateStringId);
+      console.log(minDiff);
+      if (minDiff < 120) {
+        StreamsDigger.getStream(game, newGame.hTeam);
         console.log(date, gameDate, minDiff, newGame.hTeam);
       }
       x += 1;
     }
 
-    schedule[league] = games;
+    SCHEDULE[league] = games;
 
     return;
   };
 
-  // once we have the data, format it nicely
+  // once we hear about the data, make the game list available right away
+  // while we look for stream url
+  scheduleDigger.on('data', function(league, json){
+    SCHEDULE[league] = json.ss.gms[0].g;
+  });
+
+  // format and look for the stream urls
   scheduleDigger.once('data', formatSchedule);
 
   // get schedule for each league
+  // TODO: run this once every hour to update schedule
   leagues.forEach(function(league, i){
     scheduleDigger.getSchedule(league);
   });
 
-  exports = module.exports = schedule;
+  exports = module.exports = SCHEDULE;
 }());

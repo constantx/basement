@@ -79,6 +79,7 @@
             console.log('hello real schedule');
             parseXML.parseString(body, function(err, json) {
               if(res.statusCode == 200){
+                // emit for all who are listening for schedule data
                 schedule.emit('data', league, json);
               }
             });
