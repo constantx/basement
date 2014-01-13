@@ -6,7 +6,6 @@
 
   var Promise     = require("bluebird");
 
-
   var request     = Promise.promisify(require('request'));
 
   var parseXML    = require('xml2js');
