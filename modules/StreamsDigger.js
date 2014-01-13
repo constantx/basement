@@ -29,8 +29,7 @@
             game.active = true;
             return;
           } else {
-            console.log(i);
-            getURL();
+            setTimeout(getURL, 1000);
           }
           return i++;
         });

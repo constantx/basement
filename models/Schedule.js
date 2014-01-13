@@ -44,6 +44,7 @@
       minDiff = Math.floor(((Math.abs(gameDate - date)) / 1000) / 60);
       console.log(minDiff);
       if (minDiff < 120) {
+        // try to find the right stream url and add it this game
         StreamsDigger.getStream(game, newGame.hTeam);
         console.log(date, gameDate, minDiff, newGame.hTeam);
       }
