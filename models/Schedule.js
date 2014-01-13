@@ -45,8 +45,8 @@
       console.log(minDiff);
       if (minDiff < 120) {
         // try to find the right stream url and add it this game
-        StreamsDigger.getStream(game, newGame.hTeam);
         console.log(date, gameDate, minDiff, newGame.hTeam);
+        StreamsDigger.getStream(game, newGame.hTeam);
       }
       x += 1;
     }

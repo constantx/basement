@@ -29,7 +29,7 @@
             game.active = true;
             return;
           } else {
-            setTimeout(getURL, 1000);
+            setTimeout(getURL, 300);
           }
           return i++;
         });
