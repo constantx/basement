@@ -48,6 +48,7 @@ module.exports = (grunt) ->
             "*.jade"
             "*.js"
             ".slugignore"
+            ".git"
             "app/public/*"
             "readme*"
             "Gruntfile*"
