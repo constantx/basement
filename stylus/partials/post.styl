@@ -1,0 +1,207 @@
+// push paragraph and list to the right side
+.hentry
+  position: relative
+  margin-bottom: 3em
+
+  .entry-heading
+    position: relative
+    z-index: 10
+
+  .entry-title
+    setHeading(2.25)
+    font-family: font_heading
+    text-align: center
+    @media only screen and (max-width: 480px)
+      font-size: 1.75em
+    @media only screen and (min-width: 769px)
+      text-align: left
+      setHeading(2.554)
+    @media only screen and (min-width: 1024px)
+      setHeading(3.375)
+
+  .entry-subtitle
+    setHeading(1.135)
+    font-family: font_serif
+    padding-top: 0.5em
+    text-align: center
+    @media only screen and (min-width: 769px)
+      text-align: left
+      setHeading(1.5)
+    @media only screen and (min-width: 1024px)
+      setHeading(1.703)
+
+  .entry-cover
+    position: absolute
+    z-index: 0
+    top: 0
+    left: 0
+    right: 0
+    text-align: center
+    img
+      position: relative
+      display: block
+      width: 100%
+      height: auto
+
+    // cover's screen to reduce brightness
+    &:after
+      content: ""
+      position: absolute
+      z-index: 1
+      top: 0
+      left: 0
+      bottom: 0
+      height: 100%
+      width: 100%
+      background: #000
+      opacity: 0.2
+
+  .meta-info
+    font-family: font_sans
+    font-size: 0.7273em
+    color: color_meta
+    text-transform: uppercase
+
+
+  .post-teaser-link
+    font-weight: bold
+    text-align: right
+    a
+      padding-right: 0.5em
+      border-bottom: none
+      border-right: solid 0.5em color_main
+      transition: border-width 0.1s ease-in
+      &:hover
+        border-width: 1em
+        border-color: color_main_cool
+
+
+  .entry-content-wrapper
+    position: relative
+    z-index: 1000
+    padding-top: 1em
+    background: color_bgr
+
+  // style for anything inside markdown
+  .entry-content
+    & > p,
+    & > blockquote,
+    & > ul
+    & > ol,
+    & > h1,
+    & > h2,
+    & > h3,
+    & > h4,
+    & > h5,
+    & > h6,
+    & > iframe,
+    & > pre[class*="language-"],
+    & > .post-meta,
+    & > .post-social,
+    & > .embeded
+      @extend .col
+      @extend .col-8
+      @extend .offset-2
+      @media only screen and (max-width: 769px)
+        margin-left: 0
+        width: 100%
+
+
+    & > h2,
+    & > h3,
+    & > h4,
+    & > h5,
+    & > h6
+      font-weight: bold
+      margin-top: 1em
+      margin-bottom: 1em
+
+    & > ol,
+    & > ul
+      margin-bottom: 1em
+      padding-left: 1.5em
+      li
+        margin-bottom: 0.5em
+
+    & > ul
+      list-style: square
+
+    & > ol
+      list-style-type: decimal
+
+    & > blockquote
+      margin-bottom: 1em
+      padding-left: 0.5em
+      font-style: italic
+      border-left: solid 0.5em color_meta
+      p
+        margin-left: 1em
+
+    & > p
+      margin-bottom: 1em
+      img
+        max-width: 100%
+        height: auto
+
+
+  .author-photo
+    @extend .col
+    @extend .col-2
+    @extend .pull-2
+    position: absolute
+    z-index: 2000
+    left: 0
+    top: 0
+    max-width: 50%
+    font-family: font_sans
+    color: color_meta
+    text-align: center
+    @media only screen and (max-width: 769px)
+      position: relative
+      top: 0
+      width: 10em !important
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 1em
+
+
+  .post-meta
+    position: relative
+    margin-top: 0
+    margin-bottom: 2em
+    @media only screen and (max-width: 769px)
+      text-align: center
+
+    .author
+      color: color_text
+
+
+  .post-social
+    margin-top: 3em
+    padding-top: 0.5em
+    border-top: solid 0.3em color_border
+
+
+.hentry-has-cover
+  overflow: hidden
+
+  .entry-heading
+    padding-top: 10%
+    padding-bottom: 10%
+    max-height: 800px
+    @media only screen and (min-width: 540px)
+      padding-top: 20%
+      padding-bottom: 20%
+    @media only screen and (min-width: 1024px)
+      padding-top: 25%
+      padding-bottom: 25%
+
+  .entry-title
+  .entry-subtitle
+    position: relative
+    color: rgba(color_light, 0.98)
+    text-shadow: 3px 3px 4px rgba(0,0,0,0.5)
+
+.hentry-has-subtitle
+  .entry-title
+    padding-bottom: 0

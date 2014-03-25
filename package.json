@@ -16,7 +16,8 @@
     "socket.io": "0.9.6",
     "coffee-script": "~1.6.3",
     "colors": "~0.6.2",
-    "grunt-cli": "~0.1.9"
+    "grunt-cli": "~0.1.9",
+    "grunt-contrib-stylus": "~0.11.0"
   },
   "devDependencies": {
     "nodemon": "~0.7.1",

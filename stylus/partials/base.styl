@@ -1,7 +1,7 @@
-@import 'partials/var'
-@import 'partials/reset'
-@import 'partials/grid'
-@import 'partials/typography'
+@import 'var'
+@import 'reset'
+@import 'grid'
+@import 'typography'
 
 /////////////////////////////////////////////////////// Common Layout Helpers
 
@@ -9,20 +9,23 @@
   width: 100%
   height: auto
 
+
 .circular
   border-radius: 50%
+
 
 // prevent FOUT
 .wf-loading
   h1,h2,h3,h5,h6,p,a
     visibility: hidden
 
+
 .wf-inactive
 .wf-active
   h1,h2,h3,h5,h6,p,a
     visibility: visible
 
-/////////////////////////////////////////////////////// Common Layout Helpers
+
 .logo
   display: block
   padding: 1em 0
@@ -34,12 +37,14 @@
   @media only screen and (max-width: 769px)
     setHeading(1.5)
 
+
 .main-header
   position: relative
   z-index: 1000
   background-color: color_light
   padding: 1em 0
   border-bottom: solid 1px color_border
+
 
 .main-nav
   padding: 1em 0
@@ -52,6 +57,7 @@
     display: inline-block
     text-transform: uppercase
     letter-spacing: 0.1em
+
 
 .main-footer
   text-align: center
