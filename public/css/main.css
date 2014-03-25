@@ -250,7 +250,7 @@ table {
 .pull-12 {
   margin-left: -100%;
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 767px) {
   .col,
   .hentry .entry-content > p,
   .hentry .entry-content > blockquote,
@@ -664,15 +664,10 @@ font-style:normal }
   z-index: 10;
 }
 .hentry .entry-title {
-  font-size: 2.25em;
-  line-height: 1;
+  font-size: 1.75em;
+  line-height: 1.2857142857142858;
   font-family: "faricy-new-web", Helvetica, Arial, sans-serif;
   text-align: center;
-}
-@media only screen and (max-width: 480px) {
-  .hentry .entry-title {
-    font-size: 1.75em;
-  }
 }
 @media only screen and (min-width: 769px) {
   .hentry .entry-title {
