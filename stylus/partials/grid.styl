@@ -10,23 +10,29 @@ numCol         = 1..numColMax
 colGutter      = 1.5%
 widthContainer = (1366/baseFontSizePx)em
 
+
 /*======================================*\
-  GRID SETTING
+  HELPER FUNCTION
 \*======================================*/
 getColWidth(n)
   n * (100% / numColMax)
 
 
+/*======================================*\
+  HELPER
+\*======================================*/
 .clearfix
   &:before,
   &:after
     content: " "
     display: table
-
   &:after
     clear: both
 
 
+/*======================================*\
+  MAIN GRID LAYOUT
+\*======================================*/
 .container
   @extend .clearfix
   position: relative
@@ -56,7 +62,9 @@ getColWidth(n)
     margin-right: auto
 
 
-/////////////////////////////////////////////////////// Desktop Grid
+/*======================================*\
+  DESKTOP GRID
+\*======================================*/
 for num in numCol
   // make col
   .col-{num}
@@ -70,8 +78,10 @@ for num in numCol
   .pull-{num}
     margin-left: -(getColWidth(num))
 
-/////////////////////////////////////////////////////// Responsive Grid
-@media only screen and (max-width: 769px)
+/*======================================*\
+  MOBILE GRID
+\*======================================*/
+@media only screen and (max-width: 767px)
   // make normal column become full width
   .col
     float: none
