@@ -1,24 +1,20 @@
-/////////////////////////////////////////////////////// HELPERS FUNCTION
+/*======================================*\
+  GRID SETTING
+\*======================================*/
 
-// this is a recursive function
-// it calculates the leading for a targeted line-height
-// if target_leading is less then one normal line for that fontSize
-// it'll try to add an extra half line via base_leading
-_calcLeading(target_leading, fontSize)
-  result = target_leading/fontSize
-  if result < 1
-    result = _calcLeading(target_leading + (base_leading/2), fontSize)
-  else
-    return result
+baseFontSizePx = 16
+baseLeading    = 1.5
+baseFontSize   = (baseFontSizePx/16*100)%
+numColMax      = 12
+numCol         = 1..numColMax
+colGutter      = 1.5%
+widthContainer = (1366/baseFontSizePx)em
 
-setHeading(fontSize)
-  font-size: (fontSize)em
-  line-height: _calcLeading(base_leading, fontSize)
-
-calWidth(n)
-  n * 8.3333%
-
-/////////////////////////////////////////////////////// GRID
+/*======================================*\
+  GRID SETTING
+\*======================================*/
+getColWidth(n)
+  n * (100% / numColMax)
 
 
 .clearfix
@@ -30,15 +26,18 @@ calWidth(n)
   &:after
     clear: both
 
+
 .container
+  @extend .clearfix
   position: relative
   margin: 0 auto
-  max-width: width_main
+  max-width: widthContainer
   width: 90%
-  @extend .clearfix
+
 
 .row
   @extend .clearfix
+
 
 .is-a-col
   float: left
@@ -48,6 +47,7 @@ calWidth(n)
   padding-right: colGutter
   min-height: 1px
 
+
 .col
   @extend .is-a-col
   &.centered
@@ -56,14 +56,19 @@ calWidth(n)
     margin-right: auto
 
 
+/////////////////////////////////////////////////////// Desktop Grid
 for num in numCol
   // make col
   .col-{num}
-    width: calWidth(num)
+    width: getColWidth(num)
 
   // make col offset
   .offset-{num}
-    margin-left: calWidth(num)
+    margin-left: getColWidth(num)
+
+  // make col pulled back to the left
+  .pull-{num}
+    margin-left: -(getColWidth(num))
 
 /////////////////////////////////////////////////////// Responsive Grid
 @media only screen and (max-width: 769px)
@@ -76,8 +81,10 @@ for num in numCol
   for num in numCol
     .col-m-{num}
       @extend .is-a-col
-      width: calWidth(num) !important
+      width: getColWidth(num) !important
 
     // make all offset column full column on mobile
     .offset-{num}
+    .pull-{num}
       margin-left: 0
+

@@ -49,7 +49,7 @@ table {
 .container {
   position: relative;
   margin: 0 auto;
-  max-width: 62.09090909090909em;
+  max-width: 85.375em;
   width: 90%;
 }
 .is-a-col,
@@ -79,76 +79,76 @@ table {
   margin-right: auto;
 }
 .col-1 {
-  width: 8.3333%;
+  width: 8.333333333333334%;
 }
 .offset-1 {
-  margin-left: 8.3333%;
+  margin-left: 8.333333333333334%;
 }
 .col-2 {
-  width: 16.6666%;
+  width: 16.666666666666668%;
 }
 .offset-2 {
-  margin-left: 16.6666%;
+  margin-left: 16.666666666666668%;
 }
 .col-3 {
-  width: 24.999899999999997%;
+  width: 25%;
 }
 .offset-3 {
-  margin-left: 24.999899999999997%;
+  margin-left: 25%;
 }
 .col-4 {
-  width: 33.3332%;
+  width: 33.333333333333336%;
 }
 .offset-4 {
-  margin-left: 33.3332%;
+  margin-left: 33.333333333333336%;
 }
 .col-5 {
-  width: 41.6665%;
+  width: 41.66666666666667%;
 }
 .offset-5 {
-  margin-left: 41.6665%;
+  margin-left: 41.66666666666667%;
 }
 .col-6 {
-  width: 49.99979999999999%;
+  width: 50%;
 }
 .offset-6 {
-  margin-left: 49.99979999999999%;
+  margin-left: 50%;
 }
 .col-7 {
-  width: 58.333099999999995%;
+  width: 58.333333333333336%;
 }
 .offset-7 {
-  margin-left: 58.333099999999995%;
+  margin-left: 58.333333333333336%;
 }
 .col-8 {
-  width: 66.6664%;
+  width: 66.66666666666667%;
 }
 .offset-8 {
-  margin-left: 66.6664%;
+  margin-left: 66.66666666666667%;
 }
 .col-9 {
-  width: 74.99969999999999%;
+  width: 75%;
 }
 .offset-9 {
-  margin-left: 74.99969999999999%;
+  margin-left: 75%;
 }
 .col-10 {
-  width: 83.333%;
+  width: 83.33333333333334%;
 }
 .offset-10 {
-  margin-left: 83.333%;
+  margin-left: 83.33333333333334%;
 }
 .col-11 {
-  width: 91.66629999999999%;
+  width: 91.66666666666667%;
 }
 .offset-11 {
-  margin-left: 91.66629999999999%;
+  margin-left: 91.66666666666667%;
 }
 .col-12 {
-  width: 99.99959999999999%;
+  width: 100%;
 }
 .offset-12 {
-  margin-left: 99.99959999999999%;
+  margin-left: 100%;
 }
 @media only screen and (max-width: 769px) {
   .col {
@@ -156,73 +156,73 @@ table {
     width: 100% !important;
   }
   .col-m-1 {
-    width: 8.3333% !important;
+    width: 8.333333333333334% !important;
   }
   .offset-1 {
     margin-left: 0;
   }
   .col-m-2 {
-    width: 16.6666% !important;
+    width: 16.666666666666668% !important;
   }
   .offset-2 {
     margin-left: 0;
   }
   .col-m-3 {
-    width: 24.999899999999997% !important;
+    width: 25% !important;
   }
   .offset-3 {
     margin-left: 0;
   }
   .col-m-4 {
-    width: 33.3332% !important;
+    width: 33.333333333333336% !important;
   }
   .offset-4 {
     margin-left: 0;
   }
   .col-m-5 {
-    width: 41.6665% !important;
+    width: 41.66666666666667% !important;
   }
   .offset-5 {
     margin-left: 0;
   }
   .col-m-6 {
-    width: 49.99979999999999% !important;
+    width: 50% !important;
   }
   .offset-6 {
     margin-left: 0;
   }
   .col-m-7 {
-    width: 58.333099999999995% !important;
+    width: 58.333333333333336% !important;
   }
   .offset-7 {
     margin-left: 0;
   }
   .col-m-8 {
-    width: 66.6664% !important;
+    width: 66.66666666666667% !important;
   }
   .offset-8 {
     margin-left: 0;
   }
   .col-m-9 {
-    width: 74.99969999999999% !important;
+    width: 75% !important;
   }
   .offset-9 {
     margin-left: 0;
   }
   .col-m-10 {
-    width: 83.333% !important;
+    width: 83.33333333333334% !important;
   }
   .offset-10 {
     margin-left: 0;
   }
   .col-m-11 {
-    width: 91.66629999999999% !important;
+    width: 91.66666666666667% !important;
   }
   .offset-11 {
     margin-left: 0;
   }
   .col-m-12 {
-    width: 99.99959999999999% !important;
+    width: 100% !important;
   }
   .offset-12 {
     margin-left: 0;

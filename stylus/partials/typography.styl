@@ -1,4 +1,38 @@
-/////////////////////////////////////////////////////// Base Typography
+/*======================================*\
+  TYPOGRPHY
+\*======================================*/
+// typography settings
+base_font_size_px = 22
+base_font_size    = (base_font_size_px/16*100)%
+base_leading      = 1.5
+
+tk_text           = "skolar"
+tk_heading        = "faricy-new-web"
+
+font_serif        = tk_text, Georgia, serif
+font_sans         = tk_heading, Helvetica, Arial, sans-serif
+
+font_text         = font_serif
+font_heading      = font_sans
+
+// this is a recursive function
+// it calculates the leading for a targeted line-height
+// if target_leading is less then one normal line for that fontSize
+// it'll try to add an extra half line via base_leading
+_calcLeading(target_leading, fontSize)
+  result = target_leading/fontSize
+  if result < 1
+    result = _calcLeading(target_leading + (base_leading/2), fontSize)
+  else
+    return result
+
+setHeading(fontSize)
+  font-size: (fontSize)em
+  line-height: _calcLeading(base_leading, fontSize)
+
+/*======================================*\
+  BASE TYPOGRAPHY
+\*======================================*/
 
 body
   margin: 0
