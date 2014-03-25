@@ -11,6 +11,9 @@
     setHeading(1.75)
     font-family: font_heading
     text-align: center
+    text-transform: uppercase
+    @media only screen and (min-width: 540px)
+      setHeading(2.081)
     @media only screen and (min-width: 769px)
       text-align: left
       setHeading(2.554)
@@ -198,7 +201,7 @@
   .entry-subtitle
     position: relative
     color: rgba(color_light, 0.98)
-    text-shadow: 3px 3px 4px rgba(0,0,0,0.5)
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2)
 
 .hentry-has-subtitle
   .entry-title
