@@ -52,6 +52,10 @@ table {
   max-width: 85.375em;
   width: 90%;
 }
+.row {
+  margin-left: -1.5%;
+  margin-right: -1.5%;
+}
 .is-a-col,
 .col,
 .col-m-1,

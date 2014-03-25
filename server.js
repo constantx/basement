@@ -38,7 +38,7 @@
     app.use(express.bodyParser());
     app.use(express.methodOverride());
     app.use(app.router);
-    return app.use(express["static"](path.join(__dirname, "public/")));
+    app.use(express["static"](path.join(__dirname, "public/")));
   });
 
   app.configure("development", function() {
@@ -46,23 +46,23 @@
       dumpExceptions: true,
       showStack: true
     }));
-    return app.locals.pretty = true;
+    app.locals.pretty = true;
   });
 
   app.configure("production", function() {
-    return app.use(express.errorHandler());
+    app.use(express.errorHandler());
   });
 
   app.get("/", routes.index);
 
   if (!module.parent) {
     server.listen(app.get("port"), function() {
-      return console.log(("\n\n==================================================\nExpress server running on: http://localhost:" + (app.get("port")) + "\n==================================================").green);
+      console.log(("\n\n==================================================\nExpress server running on: http://localhost:" + (app.get("port")) + "\n==================================================").green);
     });
   }
 
   IO.configure("development", function() {
-    return IO.set("log level", 2);
+    IO.set("log level", 2);
   });
 
   IO.configure("production", function() {
@@ -71,12 +71,13 @@
     IO.enable("browser client minification");
     IO.enable("browser client etag");
     IO.enable("browser client gzip");
-    return IO.set("log level", 1);
+    IO.set("log level", 1);
+    return;
   });
 
   IO.sockets.on("connection", function(socket) {
-    return socket.on("hello", function() {
-      return socket.emit("hello-back", {
+    socket.on("hello", function() {
+      socket.emit("hello-back", {
         data: "the basement"
       });
     });
