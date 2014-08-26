@@ -1,0 +1,121 @@
+// staggered animation
+
+animationDelay(delay)
+  animation-delay: delay
+
+interval = .1s
+
+for num in (1..10)
+  ._{num}
+    animationDelay(num * interval)
+
+
+// animation
+
+@keyframes fadeInUp
+ 0%
+   opacity: 0
+   transform: translateY(1em)
+ 100%
+   opacity: 1
+   transform: translateY(0)
+
+animated()
+  animation-duration: 0.3s
+  animation-fill-mode: both
+  animation-name: fadeInUp
+
+
+/*======================================*\
+  fadeIn
+\*======================================*/
+@keyframes fadeInUp
+  0%
+    opacity: 0
+    transform: translateY(20px)
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+@keyframes fadeInDown
+  0%
+    opacity: 0
+    transform: translateY(-20px)
+  100%
+    opacity: 1
+    transform: translateY(0)
+
+/*======================================*\
+  fadeOut
+\*======================================*/
+@keyframes fadeOutUp
+  0%
+    opacity: 1
+    transform: translateY(0)
+  100%
+    opacity: 0
+    transform: translateY(-20px)
+
+@keyframes fadeOutDown
+  0%
+    opacity: 1
+    transform: translateY(0)
+  100%
+    opacity: 0
+    transform: translateY(20px)
+
+/*======================================*\
+  slideIn
+\*======================================*/
+@keyframes slideInUp
+  0%
+    opacity: 0
+    transform: translateY(2000px)
+  100%
+    transform: translateY(0)
+
+@keyframes slideInDown
+  0%
+    opacity: 0
+    transform: translateY(-2000px)
+  100%
+    transform: translateY(0)
+
+/*======================================*\
+  slideOut
+\*======================================*/
+@keyframes slideOutUp
+  0%
+    transform: translateY(0)
+  100%
+    opacity: 0
+    transform: translateY(-2000px)
+
+@keyframes slideOutDown
+  0%
+    transform: translateY(0)
+  100%
+    opacity: 0
+    transform: translateY(2000px)
+
+
+
+.fadeInUp
+  animation-name: fadeInUp
+.fadeInDown
+  animation-name: fadeInDown
+
+.fadeOutUp
+  animation-name: fadeOutUp
+.fadeOutDown
+  animation-name: fadeOutDown
+
+.slideInUp
+  animation-name: slideInUp
+.slideInDown
+  animation-name: slideInDown
+
+.slideOutUp
+  animation-name: slideOutUp
+.slideOutDown
+  animation-name: slideOutDown
