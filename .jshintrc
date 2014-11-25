@@ -1,0 +1,29 @@
+{
+  "bitwise": true,
+  "boss": true,
+  "browser": true,
+  "camelcase": true,
+  "curly": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "expr": true,
+  "forin": true,
+  "freeze": true,
+  "immed": true,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "node": true,
+  "node": true,
+  "nonbsp": true,
+  "nonew": true,
+  "quotmark": "single",
+  "sub": true,
+  "undef": true,
+  "unused": true,
+  "globals": {
+    "google": true,
+    "Firebase": true,
+    "FirebaseSecrets": true
+  }
+}
