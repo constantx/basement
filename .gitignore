@@ -1,5 +1,13 @@
+# Compiled Assets #
+#################
 /public/css
 /public/js
+
+# Project Files #
+#################
+dist
+.tmp
+app/lib
 
 # Compiled source #
 ###################
