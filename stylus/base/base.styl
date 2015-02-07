@@ -2,9 +2,26 @@
 @import 'reset'
 @import 'grid'
 @import 'typography'
-@import 'candy'
+@import 'animate'
 
 /////////////////////////////////////////////////////// Common Layout Helpers
+body
+  margin: 0
+  padding: 0
+  background-color: color_bgr
+  color: color_text
+
+a
+  color: color_text
+  text-decoration: none
+
+p, ul, ol
+  a
+    border-bottom: solid 2px color_main
+    transition: border-color 0.2s ease-in
+    &:hover
+      border-bottom-color: color_main_cool
+
 
 .cover
   width: 100%
@@ -30,7 +47,7 @@
 .logo
   display: block
   padding: 1em 0
-  font-family: font_serif
+  font-family: fontSerif
   text-align: center
   font-weight: normal
   color: color_text

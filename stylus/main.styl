@@ -1,7 +1,12 @@
-@import 'partials/base'
+// make sure import var first
+@import 'var'
 
+// third-party
 @import 'vendor/font-awesome'
 @import 'vendor/prism-theme'
 
-// has hentry blog structure
-@import 'partials/post'
+// basement need a base stylus
+@import 'base'
+
+// default blog post module
+@import 'modules/post'

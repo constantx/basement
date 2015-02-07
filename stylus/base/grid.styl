@@ -1,0 +1,84 @@
+.clearfix
+  &:before,
+  &:after
+    content: " "
+    display: table
+  &:after
+    clear: both
+
+/*************************************************
+ * HELPER FUNCTION
+ *************************************************/
+getColWidth(n)
+  n * (100% / numColMax)
+
+is-a-col()
+  float: left
+  box-sizing: border-box
+  position: relative
+  padding-left: colGutter
+  padding-right: colGutter
+  min-height: 1px
+
+/*************************************************
+ * DESKTOP GRID
+ *************************************************/
+for num in numCol
+  // make col
+  .col-{num}
+    width: getColWidth(num)
+
+  // make col offset
+  .offset-{num}
+    margin-left: getColWidth(num)
+
+  // make col pulled back to the left
+  .pull-{num}
+    margin-left: -(getColWidth(num))
+
+
+/*************************************************
+ * MOBILE GRID
+ *************************************************/
+@media only screen and (max-width: 767px)
+  // make normal column become full width
+  .col
+    float: none
+    width: 100% !important
+
+  // make mobile grid
+  for num in numCol
+    .col-m-{num}
+      is-a-col()
+      width: getColWidth(num) !important
+
+    // make all offset column full column on mobile
+    .offset-{num}
+    .pull-{num}
+      margin-left: 0
+
+
+/*************************************************
+ * MAIN GRID LAYOUT
+ *************************************************/
+.container
+  @extend .clearfix
+  box-sizing: border-box
+  position: relative
+  padding: 0 colGutter
+  width: mainWidth
+
+  &.centered
+    @extend .col-{numColMax}
+
+.row
+  margin-left: -(colGutter)
+  margin-right: -(colGutter)
+  @extend .clearfix
+
+.col
+  is-a-col()
+  &.centered
+    float: none
+    margin-left: auto
+    margin-right: auto
