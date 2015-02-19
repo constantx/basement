@@ -8,7 +8,8 @@ Jumpstart your node.js server for real-time app prototyping
 - start the server with `grunt`
 
 ## In the basement
-- [coffeescript](http://coffeescript.org/)
+- [grunt](http://gruntjs.com/)
+- [browserify](http://browserify.org/)
 - [jade](http://jade-lang.com/)
 - [stylus](http://learnboost.github.com/stylus/)
 - [nib](http://github.com/visionmedia/nib/)
