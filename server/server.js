@@ -1,16 +1,16 @@
 require('colors');
 
-var http = require('http');
 var path = require('path');
 var express = require('express');
 // var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var routes = require('./routes/index');
-var app = express();
-var server;
-var IO;
+var routes = require('./routes');
+var app = require('express')();
+var debug = require('debug')('server');
+var server = require('http').Server(app);
+var io;
 
 // view engine setup
 app.set('port', process.env.PORT || 5000);
@@ -61,11 +61,9 @@ app.use(function(err, req, res) {
 });
 
 // make the server
-server = http.createServer(app);
-
 if (!module.parent) {
   server.listen(app.get('port'), function() {
-    console.log([
+    debug([
       '\n==================================================',
       '\nExpress server running on: http://localhost:',
       (app.get('port')),
@@ -75,26 +73,13 @@ if (!module.parent) {
 }
 
 // socket
-IO = require('socket.io').listen(server);
+io = require('socket.io')(server);
 
-IO.configure('development', function() {
-  IO.set('log level', 2);
-});
-
-IO.configure('production', function() {
-  IO.set('transports', ['websocket', 'flashsocket', 'htmlfile', 'xhr-polling', 'jsonp-polling']);
-  IO.set('polling duration', 3);
-  IO.enable('browser client minification');
-  IO.enable('browser client etag');
-  IO.enable('browser client gzip');
-  IO.set('log level', 1);
-  return;
-});
-
-IO.sockets.on('connection', function(socket) {
+io.on('connection', function(socket) {
+  debug('socket connected');
   socket.on('hello', function() {
-    socket.emit('hello-back', {
-      data: 'the cosmo'
+    socket.emit('hello back', {
+      data: 'hello from socket'
     });
   });
 });
