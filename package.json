@@ -11,10 +11,11 @@
     "npm": "1.1.65"
   },
   "dependencies": {
+    "colors": "~0.6.2",
     "express": "3.0.1",
     "jade": "0.27.6",
-    "socket.io": "0.9.6",
-    "colors": "~0.6.2"
+    "morgan": "^1.5.1",
+    "socket.io": "0.9.6"
   },
   "devDependencies": {
     "domready": "1.0.6",
