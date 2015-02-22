@@ -38,6 +38,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     jscs: {
       src: [
         '<%= jshint.client.src %>',
@@ -47,6 +48,7 @@ module.exports = function(grunt) {
         config: '.jscsrc'
       }
     },
+
     nodemon: {
       dev: {
         cwd: './',
@@ -64,6 +66,7 @@ module.exports = function(grunt) {
         }
       }
     },
+
     browserify: {
       options: {
         watch: process.env.NODE_ENV === 'development',
